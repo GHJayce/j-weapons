@@ -1,15 +1,8 @@
 {
   "name": "j-weapons",
   "version": "0.0.1",
+  "author": "GHBJayce",
   "description": "There's always the JavaScript weapons you want.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:js": "webpack --mode development --progress --config build/webpack.prod.config.js",
-    "build:compress": "webpack --mode production --progress --config build/webpack.prod.compress.config.js -p",
-    "dev": "webpack --mode development --progress --config build/webpack.dev.config.js",
-    "build": "npm run build:compress"
-  },
   "keywords": [
     "javascript",
     "utils",
@@ -18,7 +11,14 @@
     "utility-library",
     "utility-function"
   ],
-  "author": "GHBJayce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "webpack --mode development --progress --config build/webpack.prod.config.js",
+    "build:compress": "webpack --mode production --progress --config build/webpack.prod.compress.config.js -p",
+    "dev": "webpack --mode development --progress --config build/webpack.dev.config.js",
+    "build": "npm run build:compress"
+  },
   "license": "MIT",
   "dependencies": {
     "webpack": "^4.29.3",
@@ -28,5 +28,13 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GHBJayce/j-weapons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GHBJayce/j-weapons/issues"
+  },
+  "homepage": "https://github.com/GHBJayce/j-weapons#readme"
 }
