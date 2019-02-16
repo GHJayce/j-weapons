@@ -1,0 +1,32 @@
+{
+  "name": "j-weapons",
+  "version": "0.0.1",
+  "description": "There's always the JavaScript weapons you want.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "webpack --mode development --progress --config build/webpack.prod.config.js",
+    "build:compress": "webpack --mode production --progress --config build/webpack.prod.compress.config.js -p",
+    "dev": "webpack --mode development --progress --config build/webpack.dev.config.js",
+    "build": "npm run build:compress"
+  },
+  "keywords": [
+    "javascript",
+    "utils",
+    "utility",
+    "utilities",
+    "utility-library",
+    "utility-function"
+  ],
+  "author": "GHBJayce",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

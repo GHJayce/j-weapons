@@ -1,0 +1,19 @@
+let moduleExports = {};
+
+const commonDir = 'common';
+const r = require.context('./', true, /^\.\/.+\/.+\.js$/);
+
+r.keys().forEach(key => {
+    let attr = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'));
+    if (key.indexOf(commonDir) !== -1) {
+        moduleExports = Object.assign(moduleExports, r(key));
+    } else {
+        moduleExports[attr] = r(key);
+    }
+});
+
+for (let i in moduleExports) {
+    window[i] = moduleExports[i];
+}
+
+module.exports = moduleExports;
