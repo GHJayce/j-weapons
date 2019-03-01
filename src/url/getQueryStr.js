@@ -10,7 +10,7 @@ function getQueryStr(url, key) {
     const query = str.split('&').map(function (v) {
         return v.split('=')
     }).reduce(function (acc, v) {
-        acc[JW.urlDecode(v[0].trim())] = JW.urlDecode(v[1].trim())
+        acc[JW.urlDecode(v[0].trim())] = v[1] === undefined ? '' : JW.urlDecode(v[1].trim())
 
         return acc
     }, {})
