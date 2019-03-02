@@ -6,7 +6,8 @@
  * @param {string|number} key
  */
 function getQueryStr(url, key) {
-    const str = url.substring(url.indexOf('?') + 1)
+    const hashLocation = url.indexOf('#')
+    const str = url.substring(url.indexOf('?') + 1, hashLocation !== -1 ? hashLocation : url.length)
     const query = str.split('&').map(function (v) {
         return v.split('=')
     }).reduce(function (acc, v) {

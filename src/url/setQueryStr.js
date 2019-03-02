@@ -7,13 +7,14 @@
  * @param {string} val
  */
 function setQueryStr(url, key, val) {
+    const firstSearch = url.indexOf('?')
+    const firstHash = url.indexOf('#')
     const len = url.length - 1
-    let offset = url.indexOf('?')
-    let result = offset === -1 ? '?' : ''
+    let result = firstSearch === -1 ? '?' : ((firstSearch < len & url.indexOf('=') !== -1) ? '&' : '')
 
-    result = result + key + '=' + val + (offset !== -1 && offset < len ? '&' : '')
+    result = result + key + '=' + val
 
-    return url.insert(result, offset !== -1 ? offset : len)
+    return url.insert(result, firstHash !== -1 ? firstHash - 1 : len)
 }
 
 module.exports = setQueryStr
