@@ -1,6 +1,6 @@
 {
   "name": "j-weapons",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "GHBJayce",
   "description": "There's always the JavaScript weapons you want.",
   "keywords": [
@@ -20,11 +20,10 @@
     "build": "npm run build:compress"
   },
   "license": "MIT",
-  "dependencies": {
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1"
