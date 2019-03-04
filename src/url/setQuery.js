@@ -2,8 +2,9 @@
 /**
  * 设置当前url的参数
  *
- * @param {string|number} key
- * @param {string} val
+ * @param {String|Number|Object} key
+ * @param {String} val
+ * @returns {String}
  */
 function setQuery(key, val) {
     return JW.setQueryStr(window.location.href, key, val)
