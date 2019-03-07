@@ -3,6 +3,7 @@
  * 判断是否为空
  *
  * @param {*} data
+ * @returns {Boolean}
  */
 function isEmpty(data) {
     const type = JW.getType(data)
@@ -34,7 +35,8 @@ function isEmpty(data) {
 /**
  * 获取数据长度
  *
- * @param {(array|string|object)} data
+ * @param {(Array|String|Object)} data
+ * @returns {Number}
  */
 function length(data) {
     const type = getType(data)
@@ -46,6 +48,7 @@ function length(data) {
  * 获取数据类型的字符串格式
  *
  * @param {*} data
+ * @returns {String}
  */
 function typeofStr(data) {
     return Object.prototype.toString.call(data)
@@ -57,6 +60,7 @@ function typeofStr(data) {
  * 返回小写；能识别array、null
  *
  * @param {*} data
+ * @returns {String}
  */
 function getType(data) {
     const type = JW.typeofStr(data)
@@ -65,18 +69,23 @@ function getType(data) {
 }
 
 /**
- * 对象深拷贝
+ * 对象/数组深拷贝
  *
- * @param {object} obj
+ * @param {(Object|Array)} data
+ * @returns {(Object|Array)}
  */
-function deepCopy(obj) {
-    let newObj = {}
+function deepCopy(data) {
+    return JW.getType(data) === 'object' ? Object.assign({}, data) : Object.values(data)
+}
 
-    for (let i in obj) {
-        newObj[i] = obj[i]
-    }
-
-    return newObj
+/**
+ * 转化为对象数据类型
+ *
+ * @param {(Array|String)} data
+ * @returns {Object}
+ */
+function toObject(data) {
+    return JW.getType(data) === 'object' && data || Object.assign({}, data)
 }
 
 module.exports = {
@@ -85,4 +94,5 @@ module.exports = {
     typeofStr,
     getType,
     deepCopy,
+    toObject,
 }
