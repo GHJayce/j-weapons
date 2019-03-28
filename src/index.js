@@ -3,6 +3,11 @@ let moduleExports = {};
 const commonDir = 'common';
 const r = require.context('./', true, /^\.\/.+\/.+\.js$/);
 
+const objectToValuesPolyfill = (object) => {
+    return Object.keys(object).map(key => object[key]);
+};
+Object.values = Object.values || objectToValuesPolyfill;
+
 r.keys().forEach(key => {
     let attr = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'));
     if (key.indexOf(commonDir) !== -1) {
