@@ -11,7 +11,7 @@
     "utility-library",
     "utility-function"
   ],
-  "main": "index.js",
+  "main": "dist/j-weapons.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:js": "webpack --mode development --progress --config build/webpack.prod.config.js",
