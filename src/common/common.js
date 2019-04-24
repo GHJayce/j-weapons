@@ -12,14 +12,14 @@ function isEmpty(data) {
     switch (type) {
         case 'object':
         case 'array':
-            result = JW.length(data) === 0
+            result = JW.getLength(data) === 0
             break
         case 'number':
-            result = data === NaN || data === 0 || data / 1 === 0
+            result = data !== data || data === 0
             break
         case 'string':
             const str = data.trim()
-            const lower = str.strtolower()
+            const lower = str.toLower()
             result = ['', '0', 'null', 'undefined', 'false'].indexOf(lower) !== -1 || str === 'NaN'
             break
         case 'undefined':
@@ -38,14 +38,14 @@ function isEmpty(data) {
  * @param {(Array|String|Object)} data
  * @returns {Number}
  */
-function length(data) {
+function getLength(data) {
     const type = getType(data)
 
     return ['array', 'string'].indexOf(type) !== -1 ? data.length : Object.keys(data).length
 }
 
 /**
- * 获取数据类型的字符串格式
+ * 获取数据的类型，冗长版（能够识别我们认为的数据类型）
  *
  * @param {*} data
  * @returns {String}
@@ -55,7 +55,7 @@ function typeofStr(data) {
 }
 
 /**
- * 获取数据类型
+ * 获取数据的类型，简洁版（能够识别我们认为的数据类型）
  *
  * 返回小写；能识别array、null
  *
@@ -65,7 +65,7 @@ function typeofStr(data) {
 function getType(data) {
     const type = JW.typeofStr(data)
 
-    return type.substring(type.lastIndexOf(' ') + 1, type.lastIndexOf(']')).strtolower()
+    return type.substring(type.lastIndexOf(' ') + 1, type.lastIndexOf(']')).toLower()
 }
 
 /**
@@ -75,7 +75,17 @@ function getType(data) {
  * @returns {(Object|Array)}
  */
 function deepCopy(data) {
-    return JW.getType(data) === 'object' ? Object.assign({}, data) : Object.values(data)
+    let result = JW.getType(data) === 'object' ? {} : []
+    for (let i in data) {
+        if (JW.getType(data[i]) === 'object') {
+            result[i] = deepCopy(data[i])
+        } else {
+            result[i] = data[i]
+        }
+    }
+
+    return result
+    // return JW.getType(data) === 'object' ? Object.assign({}, data) : Object.values(data)
 }
 
 /**
@@ -90,7 +100,7 @@ function toObject(data) {
 
 module.exports = {
     isEmpty,
-    length,
+    getLength,
     typeofStr,
     getType,
     deepCopy,

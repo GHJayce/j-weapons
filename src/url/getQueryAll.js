@@ -1,6 +1,6 @@
 
 /**
- * 根据url获取所有的参数
+ * 获取指定url的所有参数
  *
  * @param {String} url
  * @returns {Object}

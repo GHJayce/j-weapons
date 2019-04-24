@@ -1,6 +1,6 @@
 
 /**
- * 指定url设置参数
+ * 给指定url设置参数
  *
  * @param {String} url
  * @param {String|Number|Object} key
@@ -16,7 +16,7 @@ function setQueryStr(url, key, val) {
 
         result = result + key + '=' + val
 
-        return url.insert(result, firstHash !== -1 ? firstHash - 1 : len)
+        return url.insert(result, firstHash !== -1 ? firstHash : len + 1)
     }
 
     if (JW.getType(key) === 'object') {

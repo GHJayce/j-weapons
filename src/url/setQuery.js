@@ -1,6 +1,6 @@
 
 /**
- * 设置当前url的参数
+ * 给当前的url设置参数
  *
  * @param {String|Number|Object} key
  * @param {String} val

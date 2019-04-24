@@ -1,6 +1,6 @@
 
 /**
- * 根据url获取参数
+ * 获取指定url的指定参数
  *
  * @param {String} url
  * @param {String|Number|Undefined} key
