@@ -211,7 +211,7 @@ list3.b.a = 22;
 list3.b.c.a = 22;
 console.log(list, list3);
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/PgaZZx)
+[运行代码](https://codepen.io/GHBJayce/pen/mgzYOL)
 
 ### toObject
 
@@ -241,7 +241,7 @@ for (var i in list) {
     console.log(i, toObject(list[i]));
 }
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/PgaZZx)
+[运行代码](https://codepen.io/GHBJayce/pen/oOQwPV)
 
 
 ## 字符串
