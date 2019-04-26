@@ -7,7 +7,7 @@ There's always the JavaScript weapons you want.
 
 ## Links
 
-- [Documentation](https://ghbjayce.github.io/j-weapons/docs)
+- [Documentation](https://ghbjayce.github.io/j-weapons)
 
 - CDN
 
