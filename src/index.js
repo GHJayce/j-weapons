@@ -1,5 +1,6 @@
 let moduleExports = {};
 
+const version = '0.4.1';
 const commonDir = 'common';
 const r = require.context('./', true, /^\.\/.+\/.+\.js$/);
 
@@ -19,6 +20,10 @@ r.keys().forEach(key => {
 
 for (let i in moduleExports) {
     window[i] = moduleExports[i];
+}
+
+moduleExports.version = () => {
+    return version;
 }
 
 module.exports = moduleExports;

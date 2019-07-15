@@ -42,6 +42,12 @@ console.log(JW)
 ```
 [运行代码](https://codepen.io/GHBJayce/pen/NmzqLv)
 
+### 查看当前库的版本
+
+```js
+console.log(JW.version());
+```
+
 
 # 武器库
 
@@ -182,7 +188,7 @@ for (var i in list) {
 
 data：任何数据类型
 
-return：string
+return：array|object
 
 对象/数组深拷贝
 
