@@ -13,7 +13,7 @@
   ],
   "main": "dist/j-weapons.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build:js": "webpack --mode development --progress --config build/webpack.prod.config.js",
     "build:compress": "webpack --mode production --progress --config build/webpack.prod.compress.config.js -p",
     "dev": "webpack --mode development --progress --config build/webpack.dev.config.js",
@@ -22,13 +22,14 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-transform-object-assign": "^7.2.0",
-    "babel-loader": "^8.0.0-beta.0",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-object-assign": "^7.7.4",
+    "babel-loader": "^8.0.6",
     "babel-preset-env": "^7.0.0-beta.3",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
-    "lodash": ">=4.17.13"
+    "jest": "^24.9.0",
+    "lodash": "^4.17.15",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
   },
   "repository": {
     "type": "git",

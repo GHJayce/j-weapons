@@ -1,6 +1,6 @@
 let moduleExports = {};
 
-const version = '0.4.1';
+const version = '1.0';
 const commonDir = 'common';
 const r = require.context('./', true, /^\.\/.+\/.+\.js$/);
 
@@ -24,6 +24,6 @@ for (let i in moduleExports) {
 
 moduleExports.version = () => {
     return version;
-}
+};
 
 module.exports = moduleExports;
