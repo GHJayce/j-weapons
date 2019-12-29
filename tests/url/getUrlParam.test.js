@@ -1,7 +1,8 @@
 
-const getUrlParam = require('../../src/url/getUrlParam');
+const {getUrlParam} = require('../../src/url/getUrlParam');
 
 test('getUrlParam', () => {
+
     const rootUrl = 'https://api.github.com/search/repositories';
     const urlQ = 'j-weapons';
     const urlPerPage = '1';
@@ -12,5 +13,6 @@ test('getUrlParam', () => {
     expect(getUrlParam(url1, 'q')).toBe(urlQ);
     expect(getUrlParam(url1, 'author')).toBe(undefined);
     expect(getUrlParam(url1, 'author', 'GHBJayce')).toBe('GHBJayce');
-    expect(getUrlParam(url1, 'object', {a:1})).toBe({a:1});
+    expect(getUrlParam(url1, 'object', {a:1})).toEqual({a:1});
+
 });

@@ -2,11 +2,9 @@
 /**
  * url编码
  *
- * @param {String} str
+ * @param {String} needle
  * @returns {String}
  */
-const encodeUrl = (str) => {
-    return encodeURIComponent(str);
+export const encodeUrl = (needle) => {
+    return encodeURIComponent(needle);
 };
-
-module.exports = encodeUrl;

@@ -1,7 +1,7 @@
 
 require('../common/string');
 
-import decodeUrl from './decodeUrl';
+import {decodeUrl} from './decodeUrl';
 
 /**
  * 获取指定url的所有参数
@@ -9,9 +9,15 @@ import decodeUrl from './decodeUrl';
  * @param {String} url
  * @returns {Object}
  */
-const getUrlParams = (url) => {
-    const hashLocation = url.indexOf('#');
-    const str = url.substring(url.indexOf('?') + 1, hashLocation !== -1 ? hashLocation : url.length);
+export const getUrlParams = (url) => {
+    const firstHashIndex = url.indexOf('#');
+    const firstSearchIndex = url.indexOf('?');
+
+    if (firstSearchIndex === -1) {
+        return {};
+    }
+
+    const str = url.substring(firstSearchIndex + 1, firstHashIndex !== -1 ? firstHashIndex : url.length);
 
     return str
         .split('&')
@@ -21,6 +27,7 @@ const getUrlParams = (url) => {
             if (keyValArr.length > 2) {
                 const key = keyValArr.shift();
                 const val = keyValArr.join('=');
+
                 keyValArr = [key, val];
             }
 
@@ -32,5 +39,3 @@ const getUrlParams = (url) => {
             return acc;
         }, {});
 };
-
-module.exports = getUrlParams;

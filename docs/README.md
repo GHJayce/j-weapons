@@ -1,19 +1,11 @@
 
-# 入门
+# 快速开始
 
-## 简介
-
-j-weapons
+## 介绍
 
 [![Downloads](https://img.shields.io/npm/dm/j-weapons.svg)](https://www.npmjs.com/package/j-weapons) [![Version](https://img.shields.io/npm/v/j-weapons.svg)](https://www.npmjs.com/package/j-weapons) [![Known Vulnerabilities](https://snyk.io/test/github/GHBJayce/j-weapons/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GHBJayce/j-weapons?targetFile=package.json)
 
-一个函数库，这里有平时自己在开发中，用到的一些函数方法。
-
-> 本着是便利自己实际开发，同时（最好）又能方便他人而建立的库。
-
-> [新的想法&BUG](https://github.com/GHBJayce/j-weapons/issues)
-
-:warning: **非稳定版本！！**
+一个函数库。平时自己在做开发时所收集的一些常用函数方法。
 
 ## 安装
 

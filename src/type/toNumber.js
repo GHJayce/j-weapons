@@ -2,11 +2,9 @@
 /**
  * 转换为number类型
  *
- * @param {String|Number|Null|Boolean} data
+ * @param {*} needle
  * @returns {Number}
  */
-const toNumber = (data) => {
-    return data / 1;
+export const toNumber = (needle) => {
+    return needle / 1;
 };
-
-module.exports = toNumber;

@@ -1,12 +1,15 @@
 
+import {getType} from './getType';
+import {isRealNaN} from './isRealNaN';
+
 /**
  * 是否为浮点型
  *
- * @param {Number} number
+ * @param {*} needle
  * @returns {Boolean}
  */
-const isFloat = (number) => {
-    return number % 1 != 0;
+export const isFloat = (needle) => {
+    return getType(needle) === 'number'
+        && !isRealNaN(needle)
+        && needle % 1 != 0;
 };
-
-module.exports = isFloat;

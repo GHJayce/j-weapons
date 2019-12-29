@@ -1,9 +1,13 @@
 
-import getType from '../type/getType';
+import {getType} from './getType';
 
-const isRealNaN = (data) => {
+/**
+ * 检查NaN
+ *
+ * @param {*} data
+ * @returns {Boolean}
+ */
+export const isRealNaN = (data) => {
     return getType(data) === 'number'
         && data !== data;
 };
-
-module.exports = isRealNaN;

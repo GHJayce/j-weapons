@@ -1,6 +1,6 @@
-let moduleExports = {};
 
-const version = '1.0';
+let JW = {};
+
 const commonDir = 'common';
 const r = require.context('./', true, /^\.\/.+\/.+\.js$/);
 
@@ -12,18 +12,25 @@ Object.values = Object.values || objectToValuesPolyfill;
 r.keys().forEach(key => {
     let attr = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'));
     if (key.indexOf(commonDir) !== -1) {
-        moduleExports = Object.assign(moduleExports, r(key));
+        JW = Object.assign(JW, r(key));
     } else {
-        moduleExports[attr] = r(key);
+        JW[attr] = r(key)[attr];
     }
 });
 
-for (let i in moduleExports) {
-    window[i] = moduleExports[i];
-}
+JW.exposeToWindow = () => {
+    const except = ['version'];
 
-moduleExports.version = () => {
-    return version;
+    for (let i in JW) {
+        if (
+            JW.isSet(window)
+            && !JW.has(except, i)
+        ) {
+            window[i] = JW[i];
+        }
+    }
 };
 
-module.exports = moduleExports;
+JW.version = '1.0';
+
+module.exports = JW;

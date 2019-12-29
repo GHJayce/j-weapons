@@ -1,5 +1,5 @@
 
-const isEmpty = require('../../src/type/isEmpty')
+import {isEmpty} from '../../src/type/isEmpty';
 
 test('isEmpty', () => {
     let obj = {}

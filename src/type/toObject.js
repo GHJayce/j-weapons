@@ -1,14 +1,14 @@
 
-import getType from './getType'
+import {reportExceptType} from './reportExceptType';
 
 /**
  * 转化为对象数据类型
  *
- * @param {(Array|String)} data
+ * @param {(String|Array)} needle
  * @returns {Object}
  */
-const toObject = (data) => {
-    return getType(data) === 'object' && data || Object.assign({}, data);
-};
+export const toObject = (needle) => {
+    reportExceptType(['string', 'array'], needle);
 
-module.exports = toObject;
+    return Object.assign({}, needle);
+};

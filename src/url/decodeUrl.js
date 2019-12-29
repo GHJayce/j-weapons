@@ -2,11 +2,9 @@
 /**
  * url解码
  *
- * @param {String} str
+ * @param {String} needle
  * @returns {String}
  */
-const decodeUrl = (str) => {
-    return decodeURIComponent(str);
+export const decodeUrl = (needle) => {
+    return decodeURIComponent(needle);
 };
-
-module.exports = decodeUrl;

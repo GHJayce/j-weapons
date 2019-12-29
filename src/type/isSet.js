@@ -1,11 +1,15 @@
 
-import isRealNaN from './isRealNaN';
+import {isRealNaN} from './isRealNaN';
 
-const isSet = (data) => {
-    return data !== undefined
-        && data !== null
-        && !isRealNaN(data)
-        && data !== false;
+/**
+ * 检查是否设置变量
+ *
+ * @param {*} needle
+ * @returns {Boolean}
+ */
+export const isSet = (needle) => {
+    return needle !== undefined
+        && needle !== null
+        && !isRealNaN(needle)
+        && needle !== false;
 };
-
-module.exports = isSet;

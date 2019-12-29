@@ -2,11 +2,9 @@
 /**
  * 获取数据的类型，冗长版（能够识别我们认为的数据类型）
  *
- * @param {*} data
+ * @param {*} needle
  * @returns {String}
  */
-const typeofStr = (data) => {
-    return Object.prototype.toString.call(data);
+export const typeofStr = (needle) => {
+    return Object.prototype.toString.call(needle);
 };
-
-module.exports = typeofStr;

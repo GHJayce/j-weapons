@@ -7,7 +7,7 @@ let config = {
     output: {
         filename: 'j-weapons.js',
         path: path.resolve(rootpath, 'dist'),
-        library: 'JW',
+        library: 'JW', // 暴露到window的键名
         libraryTarget: 'umd'
     }
 };
