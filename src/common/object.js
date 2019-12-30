@@ -2,6 +2,7 @@
 import {getLength} from './common';
 import {reportExceptType} from '../type/reportExceptType';
 import {isEmpty} from '../type/isEmpty';
+import {toNumber} from '../type/toNumber';
 
 /**
  * 获取第一个元素键名，没有则返回undefined
@@ -72,6 +73,33 @@ export const getLastItem = (needle) => {
     let result = {};
 
     result[key] = val;
+
+    return result;
+};
+
+
+/**
+ * 转化为数组
+ *
+ * @param {Object} needle
+ * @param {Number} options 1：默认，对象所有属性值组成的数组；2：保留结构，外面套一层数组
+ * @returns {Array}
+ */
+export const toArray = (needle, options) => {
+    reportExceptType('object', needle);
+
+    options = toNumber(options) || 1;
+
+    let result = [];
+
+    switch (options) {
+        case 1:
+            result = Object.values(needle);
+            break;
+        case 2:
+            result = [needle];
+            break;
+    }
 
     return result;
 };

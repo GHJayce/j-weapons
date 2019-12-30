@@ -2,7 +2,7 @@
 import {reportExceptType} from './reportExceptType';
 
 /**
- * 转化为对象数据类型
+ * 转换为对象数据类型
  *
  * @param {(String|Array)} needle
  * @returns {Object}

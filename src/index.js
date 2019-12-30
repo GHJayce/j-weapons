@@ -18,7 +18,7 @@ r.keys().forEach(key => {
     }
 });
 
-JW.exposeToWindow = () => {
+JW.exposesToGlobal = () => {
     const except = ['version'];
 
     for (let i in JW) {

@@ -1,5 +1,5 @@
 
-const {toArray} = require('../../src/type/toArray');
+const {toArray} = require('../../../src/common/object');
 
 test('toArray', () => {
 

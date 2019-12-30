@@ -4,10 +4,10 @@ import {getType} from './getType';
 /**
  * 检查NaN
  *
- * @param {*} data
+ * @param {*} needle
  * @returns {Boolean}
  */
-export const isRealNaN = (data) => {
-    return getType(data) === 'number'
-        && data !== data;
+export const isRealNaN = (needle) => {
+    return getType(needle) === 'number'
+        && needle !== needle;
 };
