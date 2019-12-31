@@ -1,8 +1,8 @@
 {
   "name": "j-weapons",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "author": "GHBJayce",
-  "description": "There's always the JavaScript weapons you want.",
+  "description": "J武器。一个开箱即用的函数库。平时自己在做开发时所用到的一些常用函数方法。",
   "keywords": [
     "javascript",
     "utils",

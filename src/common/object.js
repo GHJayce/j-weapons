@@ -5,10 +5,10 @@ import {isEmpty} from '../type/isEmpty';
 import {toNumber} from '../type/toNumber';
 
 /**
- * 获取第一个元素键名，没有则返回undefined
+ * 获取第一个属性键名，没有则返回undefined。
  *
  * @param {Object} needle
- * @returns {mixed}
+ * @returns {(String|Undefined)}
  */
 export const getFirstKey = (needle) => {
     reportExceptType('object', needle);
@@ -18,10 +18,10 @@ export const getFirstKey = (needle) => {
 
 
 /**
- * 获取最后一个元素键名，没有则返回undefined
+ * 获取最后一个属性键名，没有则返回undefined。
  *
  * @param {Object} needle
- * @returns {mixed}
+ * @returns {(String|Undefined)}
  */
 export const getLastKey = (needle) => {
     reportExceptType('object', needle);
@@ -31,10 +31,10 @@ export const getLastKey = (needle) => {
 
 
 /**
- * 获取第一个元素，没有则返回undefined
+ * 获取第一个属性，没有则返回undefined。
  *
  * @param {Object} needle
- * @returns {mixed}
+ * @returns {(Object|Undefined)}
  */
 export const getFirstItem = (needle) => {
     reportExceptType('object', needle);
@@ -55,10 +55,10 @@ export const getFirstItem = (needle) => {
 
 
 /**
- * 获取最后一个元素，没有则返回undefined
+ * 获取最后一个属性，没有则返回undefined。
  *
  * @param {Object} needle
- * @returns {mixed}
+ * @returns {(Object|Undefined)}
  */
 export const getLastItem = (needle) => {
     reportExceptType('object', needle);

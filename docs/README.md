@@ -3,9 +3,19 @@
 
 ## 介绍
 
-[![Downloads](https://img.shields.io/npm/dm/j-weapons.svg)](https://www.npmjs.com/package/j-weapons) [![Version](https://img.shields.io/npm/v/j-weapons.svg)](https://www.npmjs.com/package/j-weapons) [![Known Vulnerabilities](https://snyk.io/test/github/GHBJayce/j-weapons/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GHBJayce/j-weapons?targetFile=package.json)
+j-weapons，J武器。一个开箱即用的函数库。平时自己在做开发时所用到的一些常用函数方法。
 
-一个开箱即用的函数库。平时自己在做开发时所收集的一些常用函数方法。
+![npm](https://img.shields.io/npm/dm/j-weapons)
+![npm](https://img.shields.io/npm/v/j-weapons?color=%2346c018)
+![npm bundle size](https://img.shields.io/bundlephobia/min/j-weapons?color=%2346c018)
+![NPM](https://img.shields.io/npm/l/j-weapons?color=%2346c018)
+[![Known Vulnerabilities](https://snyk.io/test/github/GHBJayce/j-weapons/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GHBJayce/j-weapons?targetFile=package.json)
+
+
+
+## 兼容性
+
+现代浏览器和Internet Explorer 9+。
 
 
 
@@ -71,7 +81,7 @@ console.log(JW.getType([]));
 
 ### isEmpty
 
-`isEmpty(needle, strict)`
+`isEmpty(needle[, strict])`
 
 检测是否为空。
 
@@ -208,12 +218,244 @@ console.log(JW.typeofStr(''));
 [运行代码](https://codepen.io/GHBJayce/pen/abzLvJg)
 
 
+## URL
+
+### decodeUrl
+
+`decodeUrl(needle)`
+
+url解码。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待解码对象|String||
+
+```js
+console.log(JW.decodeUrl('https%3a%2f%2fgithub.com%2fGHBJayce%2fj-weapons'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/QWwqGKN)
+
+
+### encodeUrl
+
+`encodeUrl(needle)`
+
+url编码。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待编码对象|String||
+
+```js
+console.log(JW.encodeUrl('https://github.com/GHBJayce/j-weapons'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/vYEeyXb)
+
+
+### getUrlParams
+
+`getUrlParams(url)`
+
+获取指定url的所有参数。
+
+返回值：Object
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+url|链接|String||
+
+```js
+console.log(JW.getUrlParams('https://api.github.com/search/repositories?q=j-weapons&per_page=1&p=1&sort=stargazers_count'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/jOEGVyM)
+
+
+### getCurrentUrlParams
+
+`getCurrentUrlParams()`
+
+获取当前浏览器url参数。
+
+返回值：Object
+
+```js
+console.log(JW.getCurrentUrlParams());
+```
+[运行代码](https://codepen.io/GHBJayce/pen/JjorbWZ)
+
+
+### getUrlParam
+
+`getUrlParam(url, key[, defaultVal])`
+
+获取指定url的指定参数。
+
+返回值：Mixed
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+url|链接|String||
+key|参数名称|String||
+defaultVal|未设定（`JW.isSet`）时的默认值|*||
+
+```js
+var url = 'https://api.github.com/search/repositories?q=j-weapons&per_page=1&p=1&sort=stargazers_count';
+console.log(JW.getUrlParam(url, 'q'));
+console.log(JW.getUrlParam(url, 'author', 'GHBJayce'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/yLyzVMM)
+
+
+### getCurrentUrlParam
+
+`getCurrentUrlParam(key[, defaultVal])`
+
+获取当前浏览器url的指定参数。
+
+返回值：Mixed
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+key|参数名称|String||
+defaultVal|未设定（`JW.isSet`）时的默认值|*||
+
+```js
+console.log(JW.getCurrentUrlParam('q'));
+console.log(JW.getCurrentUrlParam('author', 'GHBJayce'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/NWPabjx)
+
+
+### setUrlParams
+
+`setUrlParams(url, key[, val])`
+
+设置指定URL单个或多个参数。设置已存在的参数名称，旧值会被覆盖。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+url|待设定参数链接|*||
+key|参数名称|String \| Number \| Object||
+val|参数值|Undefined \| String \| Number||
+
+```js
+var url = 'https://github.com/GHBJayce/j-weapons';
+console.log(JW.setUrlParams(url, 'q'));
+console.log(JW.setUrlParams(url, 'author', 'GHBJayce'));
+console.log(JW.setUrlParams(url, {
+    author: 'GHBJayce'
+}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/BaywQZN)
+
+
+### setCurrentUrlParams
+
+`setCurrentUrlParams(key[, val])`
+
+设置当前URL单个或多个参数。设置已存在的参数名称，旧值会被覆盖。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+key|参数名称|String \| Number \| Object||
+val|参数值|Undefined \| String \| Number||
+
+```js
+console.log(JW.setCurrentUrlParams('q'));
+console.log(JW.setCurrentUrlParams('author', 'GHBJayce'));
+console.log(JW.setCurrentUrlParams({
+    author: 'GHBJayce'
+}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/RwNLogm)
+
+
 
 ## 对象
 
+### getFirstKey
+
+`getFirstKey(needle)`
+
+获取第一个属性键名，没有则返回undefined。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待获取对象|Object||
+
+```js
+console.log(JW.getFirstKey({a: 1, b: 2}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/dyPVOzw)
+
+
+### getFirstItem
+
+`getFirstItem(needle)`
+
+获取第一个属性，没有则返回undefined。
+
+返回值：Object|Undefined
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待获取对象|Object||
+
+```js
+console.log(JW.getFirstItem({a: 1, b: 2}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/povWNdP)
+
+
+### getLastKey
+
+`getLastKey(needle)`
+
+获取最后一个属性键名，没有则返回undefined。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待获取对象|Object||
+
+```js
+console.log(JW.getLastKey({a: 1, b: 2}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/Jjorbra)
+
+
+### getLastItem
+
+`getLastItem(needle)`
+
+获取最后一个属性，没有则返回undefined。
+
+返回值：Object|Undefined
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待获取对象|Object||
+
+```js
+console.log(JW.getLastItem({a: 1, b: 2}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/mdyBOqN)
+
+
 ### toArray
 
-`toArray(needle)`
+`toArray(needle[, options])`
 
 将对象转化为数组。
 
@@ -230,3 +472,336 @@ console.log(JW.toArray({a: 1, b: 2}, 2));
 ```
 [运行代码](https://codepen.io/GHBJayce/pen/WNbZQZz)
 
+
+
+## 字符串
+
+### trim
+
+`String.prototype.trim([needle])`
+
+去除首尾字符。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
+
+```js
+console.log(' 123 '.trim());
+console.log(' ca123ca '.trim(' ,c,a'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/zYxEojj)
+
+
+### trimLeft
+
+`String.prototype.trimLeft([needle])`
+
+去除开头字符。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
+
+```js
+console.log(' 123 '.trimLeft());
+console.log(' ca123ca '.trimLeft(' ,c,a'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/ExawNRp)
+
+
+### trimRight
+
+`String.prototype.trimRight([needle])`
+
+去除开头字符。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
+
+```js
+console.log(' 123 '.trimRight());
+console.log(' ca123ca '.trimRight(' ,c,a'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/OJPxbwM)
+
+
+### toLower
+
+`String.prototype.toLower()`
+
+转化为小写。
+
+返回值：String
+
+```js
+console.log('banana'.toLower());
+```
+
+
+### toUpper
+
+`String.prototype.toUpper()`
+
+转化为大写。
+
+返回值：String
+
+```js
+console.log('banana'.toUpper());
+```
+
+
+### insert
+
+`String.prototype.insert(needle, index)`
+
+插入字符串。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|要插入的字符串|String||
+index|插入的索引位置|Number||
+
+```js
+console.log('banan'.insert('a', 5));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/YzPrpOo)
+
+
+### indexReplace
+
+`String.prototype.indexReplace(needle, index)`
+
+索引位置替换。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|替换值|String||
+index|被替换值的位置|Number||
+
+```js
+console.log('banena'.indexReplace('a', 3));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/MWYEbPr)
+
+
+### rangeIndexReplace
+
+`String.prototype.rangeIndexReplace(needle, startIndex, endIndex)`
+
+索引范围替换。
+
+返回值：String
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|替换值|String||
+startIndex|开始替换的索引位置|Number||
+endIndex|结束替换的索引位置|Number||
+
+```js
+console.log('zxcvbnm'.rangeIndexReplace('abc', 3, 4));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/eYmGBxr)
+
+
+### getShowCount
+
+`String.prototype.getShowCount(needle)`
+
+获取指定字符串出现次数。
+
+返回值：Number
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待统计字符串|String||
+
+```js
+console.log('banana'.getShowCount('c'));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/XWJeNGB)
+
+
+### getShowCounts
+
+`String.prototype.getShowCounts()`
+
+统计字符串中所有字符的出现次数。
+
+返回值：Object
+
+```js
+console.log('banana'.getShowCounts());
+```
+[运行代码](https://codepen.io/GHBJayce/pen/GRgMNLp)
+
+
+
+## 公共
+
+### getLength
+
+`getLength(needle)`
+
+获取数据长度。
+
+返回值：Number
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待获取长度对象|String \| Array \| Object||
+
+```js
+console.log(JW.getLength('banana'));
+console.log(JW.getLength('banana'.split('')));
+console.log(JW.getLength({a: 1, b: 1}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/dyPVOEx)
+
+
+### deepCopy
+
+`deepCopy(needle)`
+
+对象/数组深拷贝。
+
+返回值：Array|Object
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待深拷贝对象|Array \| Object||
+
+```js
+var arrOrigin = [1, 2, 3];
+var arr0 = JW.deepCopy(arrOrigin);
+var arr1 = JW.deepCopy(arr0);
+arr0[0] = 0;
+console.log(arrOrigin, arr0, arr1);
+```
+[运行代码](https://codepen.io/GHBJayce/pen/MWYEbMV)
+
+
+### getFirstVal
+
+`getFirstVal(needle)`
+
+获取第一个元素值。
+
+返回值：Mixed
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待获取对象|String \| Array \| Object||
+
+```js
+console.log(JW.getFirstVal('123'));
+console.log(JW.getFirstVal([1, 2, 3]));
+console.log(JW.getFirstVal({
+    a: 1,
+    b: 2,
+    c: 3,
+}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/wvBroVg)
+
+
+### getLastVal
+
+`getLastVal(needle)`
+
+获取最后一个元素值。
+
+返回值：Mixed
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|待获取对象|String \| Array \| Object||
+
+```js
+console.log(JW.getLastVal('123'));
+console.log(JW.getLastVal([1, 2, 3]));
+console.log(JW.getLastVal({
+    a: 1,
+    b: 2,
+    c: 3,
+}));
+```
+[运行代码](https://codepen.io/GHBJayce/pen/LYEzxPK)
+
+
+### getCallbackArguments
+
+`getCallbackArguments(needle)`
+
+获取函数的形参名。
+
+返回值：Array
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|函数|Function||
+
+```js
+console.log(JW.getCallbackArguments((a, b) => {}));
+console.log(JW.getCallbackArguments(function (  a,   b) {});
+```
+[运行代码](https://codepen.io/GHBJayce/pen/OJPxWJb)
+
+
+### hasGetIndex
+
+`hasGetIndex(haystack, needle)`
+
+检查是否存在值，存在返回索引/key，不存在返回-1。
+
+返回值：String|Number
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+haystack|查找范围|String \| Array \| Object||
+needle|要查找的值|*||
+
+```js
+console.log(JW.hasGetIndex('banana', 'c'));
+console.log(JW.hasGetIndex('', 'a');
+```
+[运行代码](https://codepen.io/GHBJayce/pen/QWwqdwq)
+
+
+### has
+
+`has(haystack, needle)`
+
+检查是否存在值，存在返回索引/key，不存在返回-1。
+
+返回值：Boolean
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+haystack|查找范围|String \| Array \| Object||
+needle|要查找的值|*||
+
+```js
+console.log(JW.has('banana', 'c'));
+console.log(JW.has('', 'a');
+```
+[运行代码](https://codepen.io/GHBJayce/pen/JjorEoV)
+
+
+
+# 更新日志
+
+[CHANGELOG](https://github.com/GHBJayce/j-weapons/blob/master/CHANGELOG.md)
