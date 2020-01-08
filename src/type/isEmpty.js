@@ -39,8 +39,9 @@ export const isEmpty = (needle, strict) => {
             break;
         case 'undefined':
         case 'null':
+            result = true;
         case 'boolean':
-            result = type === 'boolean' && needle === false || true;
+            result = !needle;
             break
     }
 

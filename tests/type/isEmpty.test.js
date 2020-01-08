@@ -32,4 +32,6 @@ test('isEmpty', () => {
     expect(isEmpty({a: 1})).toBe(false)
 
     expect(isEmpty('a')).toBe(false)
+
+    expect(isEmpty(true)).toBe(false)
 })
