@@ -53,7 +53,6 @@ console.log(JW.getType([]));
 JW.exposesToGlobal();
 getType([]);
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/eYmGNey)
 
 
 
@@ -76,7 +75,6 @@ needle|待识别对象|*||
 ```
 console.log(JW.getType([]));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/MWYEwGO)
 
 
 ### isEmpty
@@ -97,7 +95,6 @@ console.log(JW.isEmpty(0));
 console.log(JW.isEmpty('0'));
 console.log(JW.isEmpty('0', 1));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/wvBraRo)
 
 
 ### isFloat
@@ -117,7 +114,6 @@ console.log(JW.isFloat(1));
 console.log(JW.isFloat(1.1));
 console.log(JW.isFloat([]));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/yLyzNWv)
 
 
 ### isRealNaN
@@ -137,7 +133,6 @@ console.log(JW.isRealNaN('NaN'));
 console.log(JW.isRealNaN(NaN));
 console.log(JW.isRealNaN({}));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/rNaGVEZ)
 
 
 ### isSet
@@ -159,7 +154,6 @@ console.log(JW.isSet(null));
 console.log(JW.isSet(false));
 console.log(JW.isSet(0));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/qBEPOWG)
 
 
 ### toNumber
@@ -177,7 +171,6 @@ needle|待转换对象|String||
 ```js
 console.log(JW.toNumber('1'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/vYEeNyG)
 
 
 ### toObject
@@ -196,7 +189,6 @@ needle|待转换对象|String \| Array||
 console.log(JW.toObject([1, 2, 3]));
 console.log(JW.toObject('123'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/gObGagg)
 
 
 ### typeofStr
@@ -215,7 +207,6 @@ needle|待检测对象|*||
 console.log(JW.typeofStr([]));
 console.log(JW.typeofStr(''));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/abzLvJg)
 
 
 ## URL
@@ -235,7 +226,6 @@ needle|待解码对象|String||
 ```js
 console.log(JW.decodeUrl('https%3a%2f%2fgithub.com%2fGHBJayce%2fj-weapons'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/QWwqGKN)
 
 
 ### encodeUrl
@@ -253,7 +243,6 @@ needle|待编码对象|String||
 ```js
 console.log(JW.encodeUrl('https://github.com/GHBJayce/j-weapons'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/vYEeyXb)
 
 
 ### getUrlParams
@@ -271,7 +260,6 @@ url|链接|String||
 ```js
 console.log(JW.getUrlParams('https://api.github.com/search/repositories?q=j-weapons&per_page=1&p=1&sort=stargazers_count'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/jOEGVyM)
 
 
 ### getCurrentUrlParams
@@ -285,7 +273,6 @@ console.log(JW.getUrlParams('https://api.github.com/search/repositories?q=j-weap
 ```js
 console.log(JW.getCurrentUrlParams());
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/JjorbWZ)
 
 
 ### getUrlParam
@@ -307,7 +294,6 @@ var url = 'https://api.github.com/search/repositories?q=j-weapons&per_page=1&p=1
 console.log(JW.getUrlParam(url, 'q'));
 console.log(JW.getUrlParam(url, 'author', 'GHBJayce'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/yLyzVMM)
 
 
 ### getCurrentUrlParam
@@ -327,7 +313,6 @@ defaultVal|未设定（`JW.isSet`）时的默认值|*||
 console.log(JW.getCurrentUrlParam('q'));
 console.log(JW.getCurrentUrlParam('author', 'GHBJayce'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/NWPabjx)
 
 
 ### setUrlParams
@@ -352,7 +337,6 @@ console.log(JW.setUrlParams(url, {
     author: 'GHBJayce'
 }));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/BaywQZN)
 
 
 ### setCurrentUrlParams
@@ -375,7 +359,6 @@ console.log(JW.setCurrentUrlParams({
     author: 'GHBJayce'
 }));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/RwNLogm)
 
 
 
@@ -396,7 +379,6 @@ needle|待获取对象|Object||
 ```js
 console.log(JW.getFirstKey({a: 1, b: 2}));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/dyPVOzw)
 
 
 ### getFirstItem
@@ -414,7 +396,6 @@ needle|待获取对象|Object||
 ```js
 console.log(JW.getFirstItem({a: 1, b: 2}));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/povWNdP)
 
 
 ### getLastKey
@@ -432,7 +413,6 @@ needle|待获取对象|Object||
 ```js
 console.log(JW.getLastKey({a: 1, b: 2}));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/Jjorbra)
 
 
 ### getLastItem
@@ -450,7 +430,6 @@ needle|待获取对象|Object||
 ```js
 console.log(JW.getLastItem({a: 1, b: 2}));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/mdyBOqN)
 
 
 ### toArray
@@ -470,7 +449,6 @@ options|选项|Number|`1` 对象所有属性值组成的数组<br>`2` 保留结�
 console.log(JW.toArray({a: 1, b: 2}));
 console.log(JW.toArray({a: 1, b: 2}, 2));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/WNbZQZz)
 
 
 
@@ -492,7 +470,6 @@ needle|可为空，默认去除空白符。<br>可指定要去除字符，多个
 console.log(' 123 '.trim());
 console.log(' ca123ca '.trim(' ,c,a'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/zYxEojj)
 
 
 ### trimLeft
@@ -511,7 +488,6 @@ needle|可为空，默认去除空白符。<br>可指定要去除字符，多个
 console.log(' 123 '.trimLeft());
 console.log(' ca123ca '.trimLeft(' ,c,a'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/ExawNRp)
 
 
 ### trimRight
@@ -530,7 +506,6 @@ needle|可为空，默认去除空白符。<br>可指定要去除字符，多个
 console.log(' 123 '.trimRight());
 console.log(' ca123ca '.trimRight(' ,c,a'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/OJPxbwM)
 
 
 ### toLower
@@ -575,7 +550,6 @@ index|插入的索引位置|Number||
 ```js
 console.log('banan'.insert('a', 5));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/YzPrpOo)
 
 
 ### indexReplace
@@ -594,7 +568,6 @@ index|被替换值的位置|Number||
 ```js
 console.log('banena'.indexReplace('a', 3));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/MWYEbPr)
 
 
 ### rangeIndexReplace
@@ -614,7 +587,6 @@ endIndex|结束替换的索引位置|Number||
 ```js
 console.log('zxcvbnm'.rangeIndexReplace('abc', 3, 4));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/eYmGBxr)
 
 
 ### getShowCount
@@ -632,7 +604,6 @@ needle|待统计字符串|String||
 ```js
 console.log('banana'.getShowCount('c'));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/XWJeNGB)
 
 
 ### getShowCounts
@@ -646,7 +617,6 @@ console.log('banana'.getShowCount('c'));
 ```js
 console.log('banana'.getShowCounts());
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/GRgMNLp)
 
 
 
@@ -669,7 +639,6 @@ console.log(JW.getLength('banana'));
 console.log(JW.getLength('banana'.split('')));
 console.log(JW.getLength({a: 1, b: 1}));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/dyPVOEx)
 
 
 ### deepCopy
@@ -691,7 +660,6 @@ var arr1 = JW.deepCopy(arr0);
 arr0[0] = 0;
 console.log(arrOrigin, arr0, arr1);
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/MWYEbMV)
 
 
 ### getFirstVal
@@ -715,7 +683,6 @@ console.log(JW.getFirstVal({
     c: 3,
 }));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/wvBroVg)
 
 
 ### getLastVal
@@ -739,7 +706,6 @@ console.log(JW.getLastVal({
     c: 3,
 }));
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/LYEzxPK)
 
 
 ### getCallbackArguments
@@ -758,7 +724,6 @@ needle|函数|Function||
 console.log(JW.getCallbackArguments((a, b) => {}));
 console.log(JW.getCallbackArguments(function (  a,   b) {});
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/OJPxWJb)
 
 
 ### hasGetIndex
@@ -778,7 +743,6 @@ needle|要查找的值|*||
 console.log(JW.hasGetIndex('banana', 'c'));
 console.log(JW.hasGetIndex('', 'a');
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/QWwqdwq)
 
 
 ### has
@@ -798,7 +762,6 @@ needle|要查找的值|*||
 console.log(JW.has('banana', 'c'));
 console.log(JW.has('', 'a');
 ```
-[运行代码](https://codepen.io/GHBJayce/pen/JjorEoV)
 
 
 

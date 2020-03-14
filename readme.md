@@ -14,6 +14,8 @@ j-weapons，J武器。一个开箱即用的函数库。平时自己在做开发�
 - [Documentation](https://ghbjayce.github.io/j-weapons)
 - CDN
 
+    > 使用时强烈建议指定版本号引入
+
     - [UNPKG](https://unpkg.com/j-weapons/)
 
         - [https://unpkg.com/j-weapons/dist/j-weapons.min.js](https://unpkg.com/j-weapons/dist/j-weapons.min.js)
