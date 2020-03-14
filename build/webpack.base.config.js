@@ -8,7 +8,8 @@ let config = {
         filename: 'j-weapons.js',
         path: path.resolve(rootpath, 'dist'),
         library: 'JW', // 暴露到window的键名
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        globalObject: 'this', // https://segmentfault.com/q/1010000018724692
     }
 };
 

@@ -1,6 +1,13 @@
 
 # CHANGELOG
 
+## v1.2.0
+
+2020-3-14
+
+1. 修复`isEmpty()`对函数（等其它类似）的判断无法得到`bool`值结果的问题，增加对`ArrayBuffer`、`sharedarraybuffer`、`int8array`等的空判断。
+1. `getLength()`增加对`ArrayBuffer`、`sharedarraybuffer`、`int8array`等的长度获取。
+
 ## v1.1.0
 
 2020-1-8

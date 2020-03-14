@@ -17,4 +17,9 @@ test('getLength', () => {
         c: 3,
     })).toBe(3);
 
+    expect(getLength(new Int8Array())).toBe(0);
+    expect(getLength(new Int8Array(1))).toBe(1);
+    expect(getLength(new ArrayBuffer())).toBe(0);
+    expect(getLength(new ArrayBuffer(1))).toBe(1);
+
 });

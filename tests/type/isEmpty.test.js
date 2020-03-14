@@ -34,4 +34,20 @@ test('isEmpty', () => {
     expect(isEmpty('a')).toBe(false)
 
     expect(isEmpty(true)).toBe(false)
+
+    expect(isEmpty(new ArrayBuffer())).toBe(true)
+    expect(isEmpty(new ArrayBuffer(2))).toBe(false)
+
+    expect(isEmpty(new Date())).toBe(false)
+
+    expect(isEmpty(new File(['JW'], 'readme.md', {
+        type: 'text/plain'
+    }))).toBe(false)
+
+    expect(isEmpty(function () {})).toBe(false)
+    expect(isEmpty(() => {})).toBe(false)
+
+    expect(isEmpty(Math)).toBe(false)
+
+    expect(isEmpty(new RegExp())).toBe(false)
 })

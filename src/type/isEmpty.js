@@ -14,13 +14,27 @@ import {has} from '../common/common';
  */
 export const isEmpty = (needle, strict) => {
     const type = getType(needle);
-    let result = needle;
+    let result;
 
     strict = strict === undefined ? false : strict;
 
     switch (type) {
         case 'object':
         case 'array':
+        case 'int8array':
+        case 'uint8array':
+        case 'uint8clampedarray':
+        case 'int16array':
+        case 'uint16array':
+        case 'int32array':
+        case 'uint32array':
+        case 'float32array':
+        case 'float64array':
+        case 'bigint64array':
+        case 'biguint64array':
+        case 'arraybuffer':
+        case 'sharedarraybuffer':
+        case 'dataview':
             result = getLength(needle) === 0;
             break;
         case 'number':
@@ -40,9 +54,13 @@ export const isEmpty = (needle, strict) => {
         case 'undefined':
         case 'null':
             result = true;
+            break;
         case 'boolean':
             result = !needle;
-            break
+            break;
+        default:
+            result = needle.toString() === '';
+            break;
     }
 
     return result;

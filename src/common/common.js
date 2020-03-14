@@ -11,13 +11,58 @@ import {reportExceptType} from '../type/reportExceptType';
  * @returns {Number}
  */
 export const getLength = (needle) => {
-    reportExceptType(['string', 'array', 'object'], needle);
+    reportExceptType([
+        'string',
+        'array',
+        'int8array',
+        'uint8array',
+        'uint8clampedarray',
+        'int16array',
+        'uint16array',
+        'int32array',
+        'uint32array',
+        'float32array',
+        'float64array',
+        'bigint64array',
+        'biguint64array',
+
+        'object',
+
+        'arraybuffer',
+        'sharedarraybuffer',
+        'dataview',
+    ], needle);
 
     const type = getType(needle);
+    let length;
 
-    return has(['array', 'string'], type)
-        ? needle.length
-        : Object.keys(needle).length;
+    switch (type) {
+        case 'string':
+        case 'array':
+        case 'int8array':
+        case 'uint8array':
+        case 'uint8clampedarray':
+        case 'int16array':
+        case 'uint16array':
+        case 'int32array':
+        case 'uint32array':
+        case 'float32array':
+        case 'float64array':
+        case 'bigint64array':
+        case 'biguint64array':
+
+        case 'object':
+            length = Object.keys(needle).length;
+            break;
+
+        case 'arraybuffer':
+        case 'sharedarraybuffer':
+        case 'dataview':
+            length = needle.byteLength;
+            break;
+    }
+
+    return length;
 };
 
 
