@@ -632,10 +632,12 @@ needle|映射对象|Object||
 返回值：String
 
 ```js
-console.log('bqwqwq'.batchReplace({
-    q: a,
-    w: n,
-}));
+var str1 = 'C = (a + b) * 2';
+var str2 = str1.batchReplace({
+    a: 10,
+    b: 5,
+});
+console.log(eval(str2));
 ```
 
 
@@ -652,7 +654,7 @@ arguments|萝卜|String||
 返回值：String
 
 ```js
-console.log('Welcome back %s, It\'s a %s moment.'sprintf('Jayce', 'wonderful'));
+console.log('Welcome back %s, This is a %s moment.'.sprintf('Jayce', 'wonderful'));
 ```
 
 

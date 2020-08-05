@@ -217,7 +217,7 @@ String.prototype.batchReplace = function (needle) {
 /**
  * 占位符替换
  *
- * @param {string} arguments... 替换值
+ * @param {String} arguments... 替换值
  * @returns {String}
  */
 String.prototype.sprintf = function () {

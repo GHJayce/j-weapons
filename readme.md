@@ -30,6 +30,10 @@ j-weapons，J武器。一个开箱即用的函数库。平时自己在做开发�
 
 Modern browsers and Internet Explorer 9+.
 
+## Changelog
+
+[Changelog](./CHANGELOG.md)
+
 ## LICENSE
 
 [MIT](LICENSE)
