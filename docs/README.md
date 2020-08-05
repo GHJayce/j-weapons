@@ -619,6 +619,43 @@ console.log('banana'.getShowCounts());
 ```
 
 
+### batchReplace
+
+`String.prototype.batchReplace(needle)`
+
+字符串批量替换。
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+needle|映射对象|Object||
+
+返回值：String
+
+```js
+console.log('bqwqwq'.batchReplace({
+    q: a,
+    w: n,
+}));
+```
+
+
+### sprintf
+
+`String.prototype.sprintf([...])`
+
+将传入的萝卜（形参）放到对应的坑位（%s）上。
+
+参数|说明|类型|可选值|默认值
+:--|:--|:--|:--|:--
+arguments|萝卜|String||
+
+返回值：String
+
+```js
+console.log('Welcome back %s, It\'s a %s moment.'sprintf('Jayce', 'wonderful'));
+```
+
+
 
 ## 公共
 

@@ -170,3 +170,63 @@ String.prototype.getShowCounts = function () {
 
     return result;
 };
+
+
+/**
+ * 批量替换字符串
+ *
+ * @param {Object} needle 替换值的映射对象
+ * @returns {String}
+ */
+String.prototype.batchReplace = function (needle) {
+    let match = Object.keys(needle);
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+    const escape = [
+        '\\',
+        '(',
+        ')',
+        '[',
+        ']',
+        '{',
+        '}',
+        '|',
+        '-',
+        '+',
+        '*',
+        '?',
+        '!',
+        '^',
+        '$',
+        '.',
+    ];
+    for (let i in match) {
+        let index = escape.indexOf(match[i]);
+        if (index !== -1) {
+            match[i] = '\\' + escape[index];
+        }
+    }
+    const rule = '(' + match.join('|') + ')';
+    const reg = new RegExp(rule, 'g');
+
+    return this.replace(reg, function (a, key) {
+        return needle[key];
+    });
+};
+
+
+/**
+ * 占位符替换
+ *
+ * @param {string} arguments... 替换值
+ * @returns {String}
+ */
+String.prototype.sprintf = function () {
+    let str = this;
+    const args = arguments;
+
+    for (let i in args) {
+        str = str.replace(/%s/, args[i]);
+    }
+
+    return str;
+};
