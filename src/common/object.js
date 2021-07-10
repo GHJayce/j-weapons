@@ -1,5 +1,5 @@
 
-import {getLength} from './common';
+import {getLength,has} from './common';
 import {reportExceptType} from '../type/reportExceptType';
 import {isEmpty} from '../type/isEmpty';
 import {toNumber} from '../type/toNumber';
@@ -102,4 +102,18 @@ export const toArray = (needle, options) => {
     }
 
     return result;
+};
+
+/**
+ * 检查对象是否存在某个key
+ *
+ * @param {Object} haystack
+ * @param {String|Number|Boolean} needle
+ * @returns {Boolean}
+ */
+export const hasKey = (haystack, needle) => {
+    reportExceptType('object', haystack);
+    reportExceptType(['string', 'number', 'boolean'], needle);
+
+    return has(Object.keys(haystack), needle.toString());
 };

@@ -25,5 +25,7 @@ test('has', () => {
         b: 2,
     };
     expect(has(str7, 1)).toBe(true);
+    expect(has(str7, 2)).toBe(true);
+    expect(has(str7, 3)).toBe(false);
 
 });

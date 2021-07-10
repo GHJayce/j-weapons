@@ -15,9 +15,9 @@ export const reportExceptType = (allowTypes, needle) => {
         : allowTypes.join(', ');
 
     if (allowTypes.indexOf(type) === -1) {
-        throw `j-weapons: The data type is not accepted.
+        throw new Error(`j-weapons: The data type is not accepted.
 Give: ${type}.
 Allow types by getType: ${allowTypesStr}.
-`;
+`);
     }
 };

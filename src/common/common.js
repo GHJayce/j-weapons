@@ -1,6 +1,6 @@
 
 import {getType} from '../type/getType';
-import {isEmpty} from '../../src/type/isEmpty';
+import {isEmpty} from '../type/isEmpty';
 import {reportExceptType} from '../type/reportExceptType';
 
 
@@ -96,7 +96,7 @@ export const deepCopy = (needle) => {
  * 获取第一个元素值
  *
  * @param {(String|Array|Object)} needle
- * @returns {mixed}
+ * @returns {*}
  */
 export const getFirstVal = (needle) => {
     reportExceptType(['string', 'array', 'object'], needle);
@@ -116,7 +116,7 @@ export const getFirstVal = (needle) => {
  * 获取最后一个元素值
  *
  * @param {(String|Array|Object)} needle
- * @returns {mixed}
+ * @returns {*}
  */
 export const getLastVal = (needle) => {
     reportExceptType(['string', 'array', 'object'], needle);
