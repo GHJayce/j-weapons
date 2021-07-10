@@ -192,3 +192,22 @@ export const hasGetIndex = (haystack, needle) => {
 export const has = (haystack, needle) => {
     return hasGetIndex(haystack, needle) !== -1;
 };
+
+/**
+ * 类似PHP array_column. 摘取数组中对象元素的某个key成为一个集合
+ *
+ * @param {Array} haystack
+ * @param {(String|Null)} needle
+ * @param {(String|Undefined)} key
+ * @returns {Array|Object}
+ */
+export const pluck = (haystack, needle, key) => {
+    reportExceptType('array', haystack);
+    reportExceptType(['string', 'null'], needle);
+    key = key || undefined;
+    reportExceptType(['string', 'undefined'], key);
+
+    return key !== undefined
+            ? Object.fromEntries(haystack.map(item => [item[key], (needle === null ? item : item[needle])]))
+            : haystack.map(item => item[needle]);
+};
