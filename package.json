@@ -1,6 +1,6 @@
 {
   "name": "j-weapons",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": "GHBJayce",
   "description": "J武器。一个开箱即用的函数库。平时自己在做开发时所用到的一些常用函数方法。",
   "keywords": [
@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "build:js": "webpack --mode development --progress --config build/webpack.prod.config.js",
-    "build:compress": "webpack --mode production --progress --config build/webpack.prod.compress.config.js -p",
+    "build:compress": "webpack --mode production --progress --config build/webpack.prod.compress.config.js",
     "dev": "webpack --mode development --progress --config build/webpack.dev.config.js",
     "build": "npm run build:compress"
   },
