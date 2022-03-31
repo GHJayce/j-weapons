@@ -31,6 +31,6 @@ JW.exposesToGlobal = () => {
     }
 };
 
-JW.version = '1.4.1';
+JW.version = '1.5.0';
 
 module.exports = JW;

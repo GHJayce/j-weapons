@@ -211,3 +211,88 @@ export const pluck = (haystack, needle, key) => {
             ? Object.fromEntries(haystack.map(item => [item[key], (needle === null ? item : item[needle])]))
             : haystack.map(item => item[needle]);
 };
+
+/**
+ * 本地缓存封装
+ *
+ * @param {String} 驱动名称，支持local、session
+ * @returns {Object}
+ */
+export const cache = (name) => {
+    name = name || 'local'
+    const main = (drive) => {
+        const get = (key) => {
+            return drive.getItem(key);
+        };
+        const set = (key, val) => {
+            return drive.setItem(key, val);
+        };
+        const incr = (key, amount) => {
+            amount = amount || 1;
+            let res = get(key)
+            res = res || '0';
+            res = res / 1;
+            res += amount;
+            set(key, res);
+            return res;
+        };
+        const decr = (key, amount) => {
+            amount = amount || 1;
+            let res = get(key)
+            res = res || '0';
+            res = res / 1;
+            res -= amount;
+            set(key, res);
+            return res;
+        };
+        const hGet = (key) => {
+            let res = drive.getItem(key);
+            return JSON.parse(res);
+        };
+        const hSet = (key,val) => {
+            return drive.setItem(key, JSON.stringify(val));
+        };
+        const del = (...keys) => {
+            for (let i in keys) {
+                drive.removeItem(keys[i]);
+            }
+            return true;
+        };
+        const clear = () => {
+            drive.clear();
+        };
+        return {
+            hGet,
+            hSet,
+            get,
+            set,
+            incr,
+            decr,
+            del,
+            clear,
+        }
+    }
+    const local = () => {
+        if (JW.isEmpty(window) || JW.isEmpty(window.localStorage) || JW.isEmpty(window.localStorage.getItem)) {
+            throw new Error('j-weapons: window.localStorage is not defined.')
+        }
+        return main(window.localStorage);
+    }
+    const session = () => {
+        if (JW.isEmpty(window) || JW.isEmpty(window.sessionStorage) || JW.isEmpty(window.sessionStorage.getItem)) {
+            throw new Error('j-weapons: window.sessionStorage is not defined.')
+        }
+        return main(window.sessionStorage);
+    }
+    switch (name) {
+        case 'local':
+            return local();
+        case 'session':
+            return session();
+        default:
+            return {
+                local,
+                session,
+            }
+    }
+};
