@@ -11,18 +11,18 @@ j-weapons，J武器。一个开箱即用的函数库。平时自己在做开发�
 
 ## Links
 
-- [Documentation](https://ghbjayce.github.io/j-weapons)
+- [Documentation](https://ghjayce.github.io/j-weapons)
 - CDN
 
     > 强烈建议使用时指定版本号
 
     - [UNPKG](https://unpkg.com/j-weapons/)
 
-        - [https://unpkg.com/j-weapons/dist/j-weapons.min.js](https://unpkg.com/j-weapons/dist/j-weapons.min.js)
+        - [https://unpkg.com/j-weapons/dist/j-weapons.umd.cjs](https://unpkg.com/j-weapons/dist/j-weapons.min.js)
 
     - [jsdelivr](https://cdn.jsdelivr.net/npm/j-weapons/)
 
-        - [https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.min.js](https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.min.js)
+        - [https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.umd.cjs](https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.min.js)
 
     - ~~cdnjs~~
 

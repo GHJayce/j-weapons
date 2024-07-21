@@ -27,8 +27,8 @@ npm install j-weapons
 
 或者使用CDN
 
-1. unpkg：https://unpkg.com/j-weapons/dist/j-weapons.min.js
-1. jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.min.js
+1. unpkg：https://unpkg.com/j-weapons/dist/j-weapons.umd.cjs
+1. jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.umd.cjs
 
 > 生产环境建议使用带版本号的CDN
 
@@ -474,9 +474,9 @@ console.log(JW.hasKey({a: 1, b: 2, true: 1}, true)); // true
 
 ## 字符串
 
-### trim
+### clueTrim
 
-`String.prototype.trim([needle])`
+`String.prototype.clueTrim([needle])`
 
 去除首尾字符。
 
@@ -487,14 +487,14 @@ console.log(JW.hasKey({a: 1, b: 2, true: 1}, true)); // true
 needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
 
 ```js
-console.log(' 123 '.trim());
-console.log(' ca123ca '.trim(' ,c,a'));
+console.log(' 123 '.clueTrim());
+console.log(' ca123ca '.clueTrim(' ,c,a'));
 ```
 
 
-### trimLeft
+### clueTrimLeft
 
-`String.prototype.trimLeft([needle])`
+`String.prototype.clueTrimLeft([needle])`
 
 去除开头字符。
 
@@ -505,14 +505,14 @@ console.log(' ca123ca '.trim(' ,c,a'));
 needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
 
 ```js
-console.log(' 123 '.trimLeft());
-console.log(' ca123ca '.trimLeft(' ,c,a'));
+console.log(' 123 '.clueTrimLeft());
+console.log(' ca123ca '.clueTrimLeft(' ,c,a'));
 ```
 
 
-### trimRight
+### clueTrimRight
 
-`String.prototype.trimRight([needle])`
+`String.prototype.clueTrimRight([needle])`
 
 去除开头字符。
 
@@ -523,8 +523,8 @@ console.log(' ca123ca '.trimLeft(' ,c,a'));
 needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
 
 ```js
-console.log(' 123 '.trimRight());
-console.log(' ca123ca '.trimRight(' ,c,a'));
+console.log(' 123 '.clueTrimRight());
+console.log(' ca123ca '.clueTrimRight(' ,c,a'));
 ```
 
 

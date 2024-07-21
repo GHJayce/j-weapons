@@ -1,5 +1,14 @@
 
 # CHANGELOG
+## v1.6.0
+2024-07-21
+1. 删除exposesToGlobal方法，不再暴露到window全局。
+2. 更名以下string类型的内置方法，避免和原生方法冲突。
+   1. `trim()`更名为`clueTrim()`
+   2. `trimLeft()`更名为`clueTrimLeft()`
+   3. `trimRight()`更名为`clueTrimRight()`
+3. TypeScript支持
+
 ## v1.5.0
 2022-03-31
 1. 新增cache函数，本地缓存封装

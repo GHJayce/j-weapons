@@ -9,33 +9,47 @@
     "utility",
     "utilities",
     "utility-library",
-    "utility-function"
+    "utility-function",
+    "typescript"
   ],
-  "main": "dist/j-weapons.min.js",
-  "scripts": {
-    "test": "jest",
-    "build:js": "webpack --mode development --progress --config build/webpack.prod.config.js",
-    "build:compress": "webpack --mode production --progress --config build/webpack.prod.compress.config.js",
-    "dev": "webpack --mode development --progress --config build/webpack.dev.config.js",
-    "build": "npm run build:compress"
-  },
   "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/plugin-transform-object-assign": "^7.14.5",
-    "babel-loader": "^8.2.2",
-    "babel-preset-env": "^7.0.0-beta.3",
-    "jest": "^27.0.6",
-    "lodash": "^4.17.21",
-    "webpack": "^5.44.0",
-    "webpack-cli": "^4.7.2"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GHBJayce/j-weapons.git"
+    "url": "https://github.com/GHJayce/j-weapons.git"
   },
   "bugs": {
-    "url": "https://github.com/GHBJayce/j-weapons/issues"
+    "url": "https://github.com/GHJayce/j-weapons/issues"
   },
-  "homepage": "https://github.com/GHBJayce/j-weapons#readme"
+  "homepage": "https://github.com/GHJayce/j-weapons#readme",
+  "type": "module",
+  "types": "src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/j-weapons.umd.cjs",
+  "module": "dist/j-weapons.js",
+  "exports": {
+    ".": {
+      "types": "src/index.d.ts",
+      "require": "dist/j-weapons.umd.cjs",
+      "import": "dist/j-weapons.js"
+    }
+  },
+  "scripts": {
+    "test": "jest --config=config/jest.config.ts",
+    "build": "vite build --config config/vite.config.ts",
+    "docs": "docsify serve docs"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "docsify-cli": "^4.4.4",
+    "eslint": "^9.6.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  }
 }
