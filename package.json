@@ -1,8 +1,7 @@
 {
   "name": "j-weapons",
-  "version": "1.5.0",
   "author": "GHBJayce",
-  "description": "J武器。一个开箱即用的函数库。平时自己在做开发时所用到的一些常用函数方法。",
+  "description": "J武器。一个开箱即用的函数库。提供了日常开发时所需的一些常用函数方法。",
   "keywords": [
     "javascript",
     "utils",
@@ -22,9 +21,11 @@
   },
   "homepage": "https://github.com/GHJayce/j-weapons#readme",
   "type": "module",
-  "types": "src/index.d.ts",
+  "types": "type/index.d.ts",
   "files": [
-    "dist"
+    "dist/",
+    "src/",
+    "type/"
   ],
   "main": "dist/j-weapons.umd.cjs",
   "module": "dist/j-weapons.js",
@@ -37,8 +38,9 @@
   },
   "scripts": {
     "test": "jest --config=config/jest.config.ts",
+    "prepublishOnly": "npm run build",
     "build": "vite build --config config/vite.config.ts",
-    "docs": "docsify serve docs"
+    "docs:serve": "docsify serve docs"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",

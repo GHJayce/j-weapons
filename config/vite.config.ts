@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
 import { fileURLToPath, URL } from 'node:url'
 
 /** @type {import('vite').UserConfig} */
@@ -15,8 +14,8 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'JW',
-      formats: ['umd', 'es']
-      // fileName: 'j-weapons'
+      formats: ['umd', 'es'],
+      fileName: 'j-weapons'
     },
     target: 'modules',
     outDir: 'dist/'

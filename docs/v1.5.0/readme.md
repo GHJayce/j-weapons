@@ -1,9 +1,11 @@
 
 # 快速开始
 
+当前版本为：v1.5.0
+
 ## 介绍
 
-j-weapons，J武器。一个开箱即用的函数库。提供了日常开发时所需的一些常用函数方法。
+j-weapons，J武器。一个开箱即用的函数库。平时自己在做开发时所用到的一些常用函数方法。
 
 ![npm](https://img.shields.io/npm/dm/j-weapons)
 ![npm](https://img.shields.io/npm/v/j-weapons?color=%2346c018)
@@ -19,42 +21,44 @@ j-weapons，J武器。一个开箱即用的函数库。提供了日常开发时�
 
 
 
-## 安装和使用
-[看看JW都有些啥](https://runkit.com/ghbjayce/60e96ac053846c001a0f0082)
+## 安装
 
-### npm
 ```shell
 npm install j-weapons
 ```
 
-使用：
-```js
-// 按需引入
-import {isEmpty} from 'j-weapons';
-
-isEmpty('')
-```
-
-### 浏览器直接引入
-
-使用CDN
+或者使用CDN
 
 - 引入指定版本：
-    - unpkg：https://unpkg.com/j-weapons@1.6.0/dist/j-weapons.umd.cjs
-    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons@1.6.0/dist/j-weapons.umd.cjs
+    - unpkg：https://unpkg.com/j-weapons@1.5.0/dist/j-weapons.min.js
+    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons@1.5.0/dist/j-weapons.min.js
 
 - 引入最新版：
-    - unpkg：https://unpkg.com/j-weapons/dist/j-weapons.umd.cjs
-    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.umd.cjs
+    - unpkg：https://unpkg.com/j-weapons/dist/j-weapons.min.js
+    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.min.js
 
 > 强烈建议生产环境使用带版本号的CDN
 
-使用：
+
+
+## 使用
+[看看JW都有些啥](https://runkit.com/ghbjayce/60e96ac053846c001a0f0082)
+```js
+import JW from 'j-weapons';
+// or 按需引入
+import {isEmpty} from 'j-weapons';
+```
+
+其它使用场景
 ```js
 // 正确引入j-weapons将得到一个全局对象
 console.log(window.JW);
 console.log(JW.version);
 console.log(JW.getType([]));
+
+// 或者你喜欢将所有方法暴露出来
+JW.exposesToGlobal();
+getType([]);
 ```
 
 
@@ -477,9 +481,9 @@ console.log(JW.hasKey({a: 1, b: 2, true: 1}, true)); // true
 
 ## 字符串
 
-### clueTrim
+### trim
 
-`String.prototype.clueTrim([needle])`
+`String.prototype.trim([needle])`
 
 去除首尾字符。
 
@@ -490,14 +494,14 @@ console.log(JW.hasKey({a: 1, b: 2, true: 1}, true)); // true
 needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
 
 ```js
-console.log(' 123 '.clueTrim());
-console.log(' ca123ca '.clueTrim(' ,c,a'));
+console.log(' 123 '.trim());
+console.log(' ca123ca '.trim(' ,c,a'));
 ```
 
 
-### clueTrimLeft
+### trimLeft
 
-`String.prototype.clueTrimLeft([needle])`
+`String.prototype.trimLeft([needle])`
 
 去除开头字符。
 
@@ -508,14 +512,14 @@ console.log(' ca123ca '.clueTrim(' ,c,a'));
 needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
 
 ```js
-console.log(' 123 '.clueTrimLeft());
-console.log(' ca123ca '.clueTrimLeft(' ,c,a'));
+console.log(' 123 '.trimLeft());
+console.log(' ca123ca '.trimLeft(' ,c,a'));
 ```
 
 
-### clueTrimRight
+### trimRight
 
-`String.prototype.clueTrimRight([needle])`
+`String.prototype.trimRight([needle])`
 
 去除开头字符。
 
@@ -526,8 +530,8 @@ console.log(' ca123ca '.clueTrimLeft(' ,c,a'));
 needle|可为空，默认去除空白符。<br>可指定要去除字符，多个字符使用英文逗号分隔|String||
 
 ```js
-console.log(' 123 '.clueTrimRight());
-console.log(' ca123ca '.clueTrimRight(' ,c,a'));
+console.log(' 123 '.trimRight());
+console.log(' ca123ca '.trimRight(' ,c,a'));
 ```
 
 
