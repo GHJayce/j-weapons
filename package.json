@@ -1,5 +1,6 @@
 {
   "name": "j-weapons",
+  "version": "1.5.0",
   "author": "GHBJayce",
   "description": "J武器。一个开箱即用的函数库。提供了日常开发时所需的一些常用函数方法。",
   "keywords": [
@@ -40,7 +41,10 @@
     "test": "jest --config=config/jest.config.ts",
     "prepublishOnly": "npm run build",
     "build": "vite build --config config/vite.config.ts",
-    "docs:serve": "docsify serve docs"
+    "docs:serve": "docsify serve docs",
+    "docs:dev": "vitepress dev docs-vitepress",
+    "docs:build": "vitepress build docs-vitepress",
+    "docs:preview": "vitepress preview docs-vitepress"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
@@ -52,6 +56,7 @@
     "ts-jest": "^29.2.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
-    "vite": "^5.3.3"
+    "vite": "^5.3.3",
+    "vitepress": "^1.3.1"
   }
 }
