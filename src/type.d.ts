@@ -33,7 +33,7 @@ declare namespace JW {
     key?: string | undefined
   ): ObjArr
   export function getType(needle: any): string
-  export function isEmpty(needle: any, strict: boolean | number = false): boolean
+  export function isEmpty(needle: any, strict: boolean | number): boolean
   export function isFloat(needle: any): boolean
   export function isRealNaN(needle?: any): boolean
   export function isSet(needle?: any): boolean

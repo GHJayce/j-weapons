@@ -30,7 +30,9 @@
   "module": "dist/j-weapons.js",
   "exports": {
     ".": {
-      "types": "src/type.d.ts",
+      "types": {
+        "default": "./src/type.d.ts"
+      },
       "require": "dist/j-weapons.umd.cjs",
       "import": "dist/j-weapons.js"
     }
