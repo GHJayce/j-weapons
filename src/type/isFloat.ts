@@ -6,6 +6,6 @@ import { isRealNaN } from '@/type/isRealNaN.ts'
  * @param {*} needle
  * @returns {Boolean}
  */
-export const isFloat = (needle: any): boolean => {
+export function isFloat(needle: any): boolean {
   return getType(needle) === 'number' && !isRealNaN(needle) && needle % 1 != 0
 }

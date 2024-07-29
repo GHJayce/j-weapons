@@ -7,7 +7,7 @@ import { has } from '@/common/has.ts'
  * @param {(String|Number|Boolean)} needle
  * @returns {Boolean}
  */
-export const hasKey = (haystack: object, needle: string | number | boolean | any): boolean => {
+export function hasKey(haystack: object, needle: string | number | boolean | any): boolean {
   reportExceptType('object', haystack)
   reportExceptType(['string', 'number', 'boolean'], needle)
   return has(Object.keys(haystack), needle.toString())

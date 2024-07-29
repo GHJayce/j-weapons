@@ -3,6 +3,6 @@
  * @param {String} needle
  * @returns {String}
  */
-export const decodeUrl = (needle: string): string => {
+export function decodeUrl(needle: string): string {
   return decodeURIComponent(needle)
 }

@@ -20,13 +20,11 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@type/*": ["./type/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
     "src",
-    "type",
     "tests",
     "./config/jest.config.ts"
   ]

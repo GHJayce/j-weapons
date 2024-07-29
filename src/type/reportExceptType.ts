@@ -6,7 +6,7 @@ import { getType } from '@/type/getType.ts'
  * @param {*} needle
  * @throws
  */
-export const reportExceptType = (allowTypes: string | Array<any>, needle: any): void => {
+export function reportExceptType(allowTypes: string | Array<any>, needle: any): void {
   const type: string = getType(needle)
   let allowTypesStr: string = ''
   if (typeof allowTypes !== 'string') {

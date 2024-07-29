@@ -7,7 +7,7 @@ import { toNumber } from '@/type/toNumber'
  * @param {Number} options 1：默认，对象所有属性值组成的数组；2：保留结构，外面套一层数组
  * @returns {Array}
  */
-export const toArray = (needle: object, options?: number): any[] => {
+export function toArray(needle: object, options?: number): any[] {
   reportExceptType('object', needle)
 
   options = options ? toNumber(options) : 1

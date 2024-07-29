@@ -1,12 +1,12 @@
 import { decodeUrl } from '@/url/decodeUrl.ts'
-import type { JWeapons } from '@type/index'
+import type { ObjectStrStr, ObjectAny } from '@/type.d.ts'
 
 /**
  * 获取指定url的所有参数
  * @param {String} url
  * @returns {Object}
  */
-export const getUrlParams = (url: string): JWeapons.ObjectStrStr => {
+export function getUrlParams(url: string): ObjectStrStr {
   const firstHashIndex: number = url.indexOf('#')
   const firstSearchIndex: number = url.indexOf('?')
 
@@ -32,7 +32,7 @@ export const getUrlParams = (url: string): JWeapons.ObjectStrStr => {
       }
       return keyValArr
     })
-    .reduce((acc: JWeapons.ObjectAny, v: string[]) => {
+    .reduce((acc: ObjectAny, v: string[]) => {
       acc[decodeUrl(v[0].trim())] = v[1] === undefined ? '' : decodeUrl(v[1].trim())
       return acc
     }, {})

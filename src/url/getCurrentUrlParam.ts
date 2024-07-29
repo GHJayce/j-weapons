@@ -6,7 +6,7 @@ import { getUrlParam } from '@/url/getUrlParam.ts'
  * @param {*} defaultVal
  * @returns {*}
  */
-export const getCurrentUrlParam = (key: string, defaultVal?: any): any => {
+export function getCurrentUrlParam(key: string, defaultVal?: any): any {
   defaultVal = defaultVal || undefined
   if (window && window.location && window.location.href) {
     return getUrlParam(window.location.href, key, defaultVal)

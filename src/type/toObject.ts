@@ -5,7 +5,7 @@ import { reportExceptType } from './reportExceptType'
  * @param {(String|Array)} needle
  * @returns {Object}
  */
-export const toObject = (needle: string | Array<any>): object => {
+export function toObject(needle: string | Array<any>): object {
   reportExceptType(['string', 'array'], needle)
   return Object.assign({}, needle) as object
 }

@@ -1,16 +1,16 @@
 import { reportExceptType } from '@/type/reportExceptType.ts'
 import { getType } from '@/type/getType.ts'
-import type { DeepCopy } from '@type/common/deepCopy.ts'
+import type { ObjectAny } from '@/type.d.ts'
 
 /**
  * 对象/数组深拷贝
  * @param {(Array|Object)} needle
  * @returns {(Array|Object)}
  */
-export const deepCopy = (needle: DeepCopy.Needle): DeepCopy.Data => {
+export function deepCopy(needle: ObjectAny): ObjectAny {
   reportExceptType(['array', 'object'], needle)
 
-  let result: DeepCopy.Data = getType(needle) === 'object' ? {} : []
+  let result: ObjectAny = getType(needle) === 'object' ? {} : []
   let i: any
 
   for (i in needle) {

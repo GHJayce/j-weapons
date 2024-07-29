@@ -1,10 +1,10 @@
 import { expect, test } from '@jest/globals'
 import '@/common/string'
 import { isEmpty } from '@/type/isEmpty.ts'
-import { JWeapons } from '@type/index'
+import type { ObjectAny } from '@/type.d.ts'
 
 test('isEmpty', (): void => {
-  let obj: JWeapons.ObjectAny = {}
+  let obj: ObjectAny = {}
 
   expect(isEmpty(null)).toBe(true)
   expect(isEmpty('null')).toBe(true)

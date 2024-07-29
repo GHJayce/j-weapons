@@ -1,5 +1,4 @@
 import { setUrlParams } from '@/url/setUrlParams.ts'
-import type { SetCurrentUrlParams } from '@type/url/setCurrentUrlParams.ts'
 
 /**
  * 设置当前URL参数
@@ -7,10 +6,10 @@ import type { SetCurrentUrlParams } from '@type/url/setCurrentUrlParams.ts'
  * @param {Undefined|String|Number} val
  * @returns {String}
  */
-export const setCurrentUrlParams = (
-  key: SetCurrentUrlParams.Key,
-  val: SetCurrentUrlParams.Val
-): string => {
+export function setCurrentUrlParams(
+  key: string | number | object,
+  val: undefined | string | number
+): string {
   if (window && window.location && window.location.href) {
     return setUrlParams(window.location.href, key, val)
   }

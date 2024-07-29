@@ -5,7 +5,7 @@ import { reportExceptType } from '@/type/reportExceptType.ts'
  * @param {Object} needle
  * @returns {(String|Undefined)}
  */
-export const getFirstKey = (needle: object): string | undefined => {
+export function getFirstKey(needle: object): string | undefined {
   reportExceptType('object', needle)
   return Object.keys(needle)[0]
 }

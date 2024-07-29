@@ -1,8 +1,7 @@
-import { Cache } from '@type/common/cache.ts'
 import { isEmpty } from '@/type/isEmpty.ts'
-import { JWeapons } from '@type/index'
+import type { ObjectAny } from '@/type.d.ts'
 
-const main = (drive: JWeapons.ObjectAny): object => {
+const main = (drive: ObjectAny): object => {
   const get = (key: string): string | null => {
     return drive.getItem(key)
   }
@@ -75,7 +74,7 @@ const session = () => {
  * @param {String} driverName 驱动名称，支持local、session
  * @returns {Object}
  */
-export const cache = (driverName?: Cache.DriverName): Cache.Return => {
+export function cache(driverName?: string): object {
   driverName = driverName || 'local'
   if (driverName === 'session') {
     return session()

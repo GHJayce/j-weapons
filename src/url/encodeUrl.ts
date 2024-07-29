@@ -3,6 +3,6 @@
  * @param {String} needle
  * @returns {String}
  */
-export const encodeUrl = (needle: string): string => {
+export function encodeUrl(needle: string): string {
   return encodeURIComponent(needle)
 }

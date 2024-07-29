@@ -11,7 +11,7 @@ j-weapons，J武器。一个开箱即用的函数库。平时自己在做开发�
 ![npm](https://img.shields.io/npm/v/j-weapons?color=%2346c018)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/j-weapons?color=%2346c018)
 ![NPM](https://img.shields.io/npm/l/j-weapons?color=%2346c018)
-[![Known Vulnerabilities](https://snyk.io/test/github/GHBJayce/j-weapons/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GHBJayce/j-weapons?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/GHJayce/j-weapons/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GHJayce/j-weapons?targetFile=package.json)
 
 
 
@@ -42,7 +42,7 @@ npm install j-weapons
 
 
 ## 使用
-[看看JW都有些啥](https://runkit.com/ghbjayce/60e96ac053846c001a0f0082)
+[看看JW都有些啥](https://runkit.com/ghjayce/60e96ac053846c001a0f0082)
 ```js
 import JW from 'j-weapons';
 // or 按需引入
@@ -231,7 +231,7 @@ url解码。
 needle|待解码对象|String||
 
 ```js
-console.log(JW.decodeUrl('https%3a%2f%2fgithub.com%2fGHBJayce%2fj-weapons'));
+console.log(JW.decodeUrl('https%3a%2f%2fgithub.com%2fGHJayce%2fj-weapons'));
 ```
 
 
@@ -248,7 +248,7 @@ url编码。
 needle|待编码对象|String||
 
 ```js
-console.log(JW.encodeUrl('https://github.com/GHBJayce/j-weapons'));
+console.log(JW.encodeUrl('https://github.com/GHJayce/j-weapons'));
 ```
 
 
@@ -299,7 +299,7 @@ defaultVal|未设定（`JW.isSet`）时的默认值|*||
 ```js
 var url = 'https://api.github.com/search/repositories?q=j-weapons&per_page=1&p=1&sort=stargazers_count';
 console.log(JW.getUrlParam(url, 'q'));
-console.log(JW.getUrlParam(url, 'author', 'GHBJayce'));
+console.log(JW.getUrlParam(url, 'author', 'GHJayce'));
 ```
 
 
@@ -318,7 +318,7 @@ defaultVal|未设定（`JW.isSet`）时的默认值|*||
 
 ```js
 console.log(JW.getCurrentUrlParam('q'));
-console.log(JW.getCurrentUrlParam('author', 'GHBJayce'));
+console.log(JW.getCurrentUrlParam('author', 'GHJayce'));
 ```
 
 
@@ -337,11 +337,11 @@ key|参数名称|String \| Number \| Object||
 val|参数值|Undefined \| String \| Number||
 
 ```js
-var url = 'https://github.com/GHBJayce/j-weapons';
+var url = 'https://github.com/GHJayce/j-weapons';
 console.log(JW.setUrlParams(url, 'q'));
-console.log(JW.setUrlParams(url, 'author', 'GHBJayce'));
+console.log(JW.setUrlParams(url, 'author', 'GHJayce'));
 console.log(JW.setUrlParams(url, {
-    author: 'GHBJayce'
+    author: 'GHJayce'
 }));
 ```
 
@@ -361,9 +361,9 @@ val|参数值|Undefined \| String \| Number||
 
 ```js
 console.log(JW.setCurrentUrlParams('q'));
-console.log(JW.setCurrentUrlParams('author', 'GHBJayce'));
+console.log(JW.setCurrentUrlParams('author', 'GHJayce'));
 console.log(JW.setCurrentUrlParams({
-    author: 'GHBJayce'
+    author: 'GHJayce'
 }));
 ```
 
@@ -881,4 +881,4 @@ JW.cache().del('name', 'age'); // 删除key
 
 # 更新日志
 
-[CHANGELOG](https://github.com/GHBJayce/j-weapons/blob/master/CHANGELOG.md)
+[CHANGELOG](https://github.com/GHJayce/j-weapons/blob/master/CHANGELOG.md)

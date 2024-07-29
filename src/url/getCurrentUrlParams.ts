@@ -1,11 +1,11 @@
 import { getUrlParams } from '@/url/getUrlParams.ts'
-import type { JWeapons } from '@type/index'
+import type { ObjectStrStr } from '@/type.d.ts'
 
 /**
  * 获取当前浏览器url参数
- * @returns {JWeapons.ObjectStrStr}
+ * @returns {ObjectStrStr}
  */
-export const getCurrentUrlParams = (): JWeapons.ObjectStrStr => {
+export function getCurrentUrlParams(): ObjectStrStr {
   if (window && window.location && window.location.href) {
     return getUrlParams(window.location.href)
   }

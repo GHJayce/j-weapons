@@ -1,6 +1,6 @@
 import { reportExceptType } from '@/type/reportExceptType.ts'
 import { getType } from '@/type/getType.ts'
-import type { HasGetIndex } from '@type/common/hasGetIndex.ts'
+import type { ObjArrStr } from '@/type.d.ts'
 
 /**
  * 检查是否存在值，存在返回索引/key，不存在返回-1
@@ -8,10 +8,7 @@ import type { HasGetIndex } from '@type/common/hasGetIndex.ts'
  * @param {*} needle 要查找的值
  * @returns {(String|Number)}
  */
-export const hasGetIndex = (
-  haystack: HasGetIndex.Haystack,
-  needle: HasGetIndex.Needle
-): HasGetIndex.Return => {
+export function hasGetIndex(haystack: ObjArrStr, needle: any): string | number {
   reportExceptType(['string', 'array', 'object'], haystack)
 
   const type: string = getType(haystack)

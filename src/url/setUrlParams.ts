@@ -1,8 +1,7 @@
 import { isSet } from '@/type/isSet.ts'
 import { getUrlParams } from '@/url/getUrlParams.ts'
 import { getType } from '@/type/getType.ts'
-import type { SetUrlParams } from '@type/url/setUrlParams.ts'
-import { JWeapons } from '@type/index'
+import type { ObjectStrStr } from '@/type.d.ts'
 
 /**
  * 设置URL单个或多个参数
@@ -11,11 +10,11 @@ import { JWeapons } from '@type/index'
  * @param {Undefined|String|Number} val
  * @returns {String}
  */
-export const setUrlParams = (
+export function setUrlParams(
   url: string,
-  key?: SetUrlParams.Key,
-  val?: SetUrlParams.Val
-): string => {
+  key?: string | number | object,
+  val?: undefined | string | number | any
+): string {
   if (!isSet(key)) {
     return url
   }
@@ -25,7 +24,7 @@ export const setUrlParams = (
   const urlLastIndex: number = urlLength - 1
 
   let result: string[] = [] // first array, second string
-  let params: JWeapons.ObjectStrStr = getUrlParams(url)
+  let params: ObjectStrStr = getUrlParams(url)
 
   if (getType(key) === 'object') {
     params = Object.assign(params, key)

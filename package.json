@@ -21,17 +21,16 @@
   },
   "homepage": "https://github.com/GHJayce/j-weapons#readme",
   "type": "module",
-  "types": "type/index.d.ts",
+  "types": "src/type.d.ts",
   "files": [
     "dist/",
-    "src/",
-    "type/"
+    "src/"
   ],
   "main": "dist/j-weapons.umd.cjs",
   "module": "dist/j-weapons.js",
   "exports": {
     ".": {
-      "types": "src/index.d.ts",
+      "types": "src/type.d.ts",
       "require": "dist/j-weapons.umd.cjs",
       "import": "dist/j-weapons.js"
     }

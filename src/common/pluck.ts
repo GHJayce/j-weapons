@@ -1,6 +1,5 @@
 import { reportExceptType } from '@/type/reportExceptType.ts'
-import type { Pluck } from '@type/common/pluck.ts'
-import { JWeapons } from '@type/index'
+import type { ObjectAny, ObjArr } from '@/type.d.ts'
 
 /**
  * 类似PHP array_column. 摘取数组中对象元素的某个key成为一个集合
@@ -9,11 +8,11 @@ import { JWeapons } from '@type/index'
  * @param {(String|Undefined)} key 是否需要以某个key作为摘取结果的key
  * @returns {Array|Object}
  */
-export const pluck = (
-  haystack: Pluck.Haystack,
-  needle: Pluck.Needle,
-  key?: Pluck.Key
-): Pluck.Return => {
+export function pluck(
+  haystack: Array<ObjectAny>,
+  needle: string | null,
+  key?: string | undefined
+): ObjArr {
   reportExceptType('array', haystack)
   reportExceptType(['string', 'null'], needle)
   key = key || undefined
@@ -21,8 +20,8 @@ export const pluck = (
 
   if (key !== undefined) {
     return Object.fromEntries(
-      haystack.map((item: JWeapons.ObjectAny) => [item[key], needle === null ? item : item[needle]])
+      haystack.map((item: ObjectAny) => [item[key], needle === null ? item : item[needle]])
     )
   }
-  return haystack.map((item: JWeapons.ObjectAny) => (needle ? item[needle] : item))
+  return haystack.map((item: ObjectAny) => (needle ? item[needle] : item))
 }

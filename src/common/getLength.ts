@@ -1,13 +1,14 @@
 import { reportExceptType } from '@/type/reportExceptType.ts'
 import { getType } from '@/type/getType.ts'
-import type { GetLength } from '@type/common/getLength.ts'
 
 /**
  * 获取数据长度
  * @param {(String|Array|Object)} needle
  * @returns {Number}
  */
-export const getLength = (needle: GetLength.Needle): number => {
+export function getLength(
+  needle: String | Array<any> | ArrayBuffer | SharedArrayBuffer | DataView | Object
+): number {
   reportExceptType(
     [
       'string',

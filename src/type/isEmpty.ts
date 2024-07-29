@@ -8,7 +8,7 @@ import { has } from '@/common/has.ts'
  * @param {Boolean} strict 默认false。非严格模式，以下情况被识别为空，字符串：'0'、'null'、'undefined'、'false'、'NaN'
  * @returns {Boolean}
  */
-export const isEmpty = (needle: any, strict: boolean | number = false): boolean => {
+export function isEmpty(needle: any, strict: boolean | number = false): boolean {
   const type: string = getType(needle)
   let result
 
@@ -38,7 +38,7 @@ export const isEmpty = (needle: any, strict: boolean | number = false): boolean 
       break
     case 'string':
       const str: string = needle.clueTrim()
-      const lower: string = str.toLower()
+      const lower: string = str.toLowerCase()
       const notStrictKeywords: string[] = ['0', 'null', 'undefined', 'false']
       let keywords: string[] = ['']
 

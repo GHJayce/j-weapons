@@ -1,6 +1,6 @@
 import { isSet } from '@/type/isSet.ts'
 import { isEmpty } from '@/type/isEmpty.ts'
-import type { JWeapons } from '@type/index'
+import type { ObjectAny } from '@/type.d.ts'
 
 const trimCommon = (needle?: string): string => {
   needle = needle || '\\s'
@@ -131,7 +131,7 @@ String.prototype.getShowCounts = function (): object {
       .join('')
       .match(/(.)\1*/g)
     if (matchRes) {
-      return matchRes.reduce((res: JWeapons.ObjectAny, cur: string) => {
+      return matchRes.reduce((res: ObjectAny, cur: string) => {
         res[cur[0]] = cur.length
         return res
       }, {})
@@ -145,7 +145,7 @@ String.prototype.getShowCounts = function (): object {
  * @param {Object} needle 替换值的映射对象
  * @returns {String}
  */
-String.prototype.batchReplace = function (needle: JWeapons.ObjectAny): string {
+String.prototype.batchReplace = function (needle: ObjectAny): string {
   let match: string[] = Object.keys(needle)
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
   const escape: string[] = [

@@ -1,9 +1,9 @@
 import { expect, test } from '@jest/globals'
 import { hasKey } from '@/common/object/hasKey.ts'
-import type { JWeapons } from '@type/index'
+import type { ObjectAny } from '@/type.d.ts'
 
 test('hasKey', (): void => {
-  const object1: JWeapons.ObjectAny = {
+  const object1: ObjectAny = {
     a: 1,
     b: {
       a: 2

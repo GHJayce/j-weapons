@@ -6,7 +6,7 @@ import { getLength } from '@/common/getLength.ts'
  * @param {Object} needle
  * @returns {(String|Undefined)}
  */
-export const getLastKey = (needle: object): string | undefined => {
+export function getLastKey(needle: object): string | undefined {
   reportExceptType('object', needle)
   return Object.keys(needle)[getLength(needle) - 1]
 }

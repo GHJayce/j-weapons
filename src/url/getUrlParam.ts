@@ -1,6 +1,6 @@
 import { isSet } from '@/type/isSet.ts'
 import { getUrlParams } from '@/url/getUrlParams.ts'
-import type { JWeapons } from '@type/index'
+import type { ObjectStrStr } from '@/type.d.ts'
 
 /**
  * 获取指定url的指定参数
@@ -9,8 +9,8 @@ import type { JWeapons } from '@type/index'
  * @param {*} defaultVal
  * @returns {*}
  */
-export const getUrlParam = (url: string, key: string, defaultVal?: any): string | undefined => {
+export function getUrlParam(url: string, key: string, defaultVal?: any): string | undefined {
   defaultVal = defaultVal || undefined
-  const params: JWeapons.ObjectStrStr = getUrlParams(url)
+  const params: ObjectStrStr = getUrlParams(url)
   return isSet(params[key]) ? params[key] : defaultVal
 }

@@ -3,6 +3,6 @@
  * @param {*} needle
  * @returns {Number}
  */
-export const toNumber = (needle: any): number => {
+export function toNumber(needle: any): number {
   return needle / 1
 }
