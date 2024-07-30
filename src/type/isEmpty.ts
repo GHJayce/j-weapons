@@ -8,7 +8,7 @@ import { has } from '@/common/has.ts'
  * @param {Boolean} strict 默认false。非严格模式，以下情况被识别为空，字符串：'0'、'null'、'undefined'、'false'、'NaN'
  * @returns {Boolean}
  */
-export function isEmpty(needle: any, strict: boolean | number): boolean {
+export function isEmpty(needle: any, strict?: boolean | number): boolean {
   const type: string = getType(needle)
   let result
 

@@ -26,16 +26,14 @@
     "dist/",
     "src/"
   ],
-  "main": "dist/j-weapons.umd.cjs",
-  "module": "dist/j-weapons.js",
+  "main": "dist/j-weapons.js",
   "exports": {
     ".": {
-      "types": {
-        "default": "./src/type.d.ts"
-      },
       "require": "dist/j-weapons.umd.cjs",
+      "default": "dist/j-weapons.js",
       "import": "dist/j-weapons.js"
-    }
+    },
+    "./string": "src/common/string.ts"
   },
   "scripts": {
     "test": "jest --config=config/jest.config.ts",
