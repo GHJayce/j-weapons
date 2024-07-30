@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/GHJayce/j-weapons#readme",
   "type": "module",
-  "types": "dist/index.js",
   "files": [
     "dist/",
     "src/"
@@ -31,8 +30,7 @@
     ".": {
       "require": "dist/index.umd.cjs",
       "default": "dist/index.js",
-      "import": "dist/index.js",
-      "types": "dist/index.d.ts"
+      "import": "dist/index.js"
     },
     "./string": "src/common/string.ts"
   },
