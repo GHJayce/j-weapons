@@ -1,6 +1,6 @@
 {
   "name": "j-weapons",
-  "author": "GHBJayce",
+  "author": "GHJayce",
   "description": "J武器。一个开箱即用的函数库。提供了日常开发时所需的一些常用函数方法。",
   "keywords": [
     "javascript",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/GHJayce/j-weapons#readme",
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.js",
   "files": [
     "dist/",
     "src/"
@@ -31,7 +31,8 @@
     ".": {
       "require": "dist/index.umd.cjs",
       "default": "dist/index.js",
-      "import": "dist/index.js"
+      "import": "dist/index.js",
+      "types": "dist/index.d.ts"
     },
     "./string": "src/common/string.ts"
   },
