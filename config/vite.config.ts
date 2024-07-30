@@ -15,7 +15,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'JW',
       formats: ['umd', 'es'],
-      fileName: 'j-weapons'
+      fileName: 'index'
     },
     target: 'modules',
     outDir: 'dist/'
