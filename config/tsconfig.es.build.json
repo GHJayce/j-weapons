@@ -31,6 +31,8 @@
   "include": [
     "../src"
   ],
-  "exclude": [
-  ]
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "resolveFullExtension": ".js"
+  }
 }
