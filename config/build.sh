@@ -1,0 +1,1 @@
+vite build --config config/vite.config.ts && tsc --project config/tsconfig.es.build.json && tsc-alias --project config/tsconfig.es.build.json

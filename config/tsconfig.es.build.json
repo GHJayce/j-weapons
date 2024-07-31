@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": false,
+    "module": "ES6",
+    "lib": ["ES2020", "DOM", "ES2017"],
+    "skipLibCheck": false,
+
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": false,
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": false,
+    "isolatedModules": true,
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "..",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "declaration": true,
+    "declarationDir": "../dist",
+    "outDir": "../dist"
+  },
+  "include": [
+    "../src"
+  ],
+  "exclude": [
+  ]
+}

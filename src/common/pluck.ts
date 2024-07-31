@@ -1,5 +1,5 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import type { ObjectAny, ObjArr } from '@/type.d.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import type { ObjectAny, ObjArr } from '@/type.d'
 
 /**
  * 类似PHP array_column. 摘取数组中对象元素的某个key成为一个集合

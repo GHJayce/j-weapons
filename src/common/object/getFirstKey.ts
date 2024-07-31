@@ -1,4 +1,4 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
+import { reportExceptType } from '@/type/reportExceptType'
 
 /**
  * 获取第一个属性键名，没有则返回undefined。

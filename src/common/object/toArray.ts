@@ -1,4 +1,4 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
+import { reportExceptType } from '@/type/reportExceptType'
 import { toNumber } from '@/type/toNumber'
 
 /**

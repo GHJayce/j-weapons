@@ -1,5 +1,5 @@
-import { getType } from '@/type/getType.ts'
-import { isRealNaN } from '@/type/isRealNaN.ts'
+import { getType } from '@/type/getType'
+import { isRealNaN } from '@/type/isRealNaN'
 
 /**
  * 是否为浮点型

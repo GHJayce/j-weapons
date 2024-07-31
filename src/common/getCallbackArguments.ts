@@ -1,5 +1,5 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { isEmpty } from '@/type/isEmpty.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { isEmpty } from '@/type/isEmpty'
 
 /**
  * 获取函数的形参名

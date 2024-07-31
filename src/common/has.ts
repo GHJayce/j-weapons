@@ -1,5 +1,5 @@
-import { hasGetIndex } from '@/common/hasGetIndex.ts'
-import type { ObjArrStr } from '@/type.d.ts'
+import { hasGetIndex } from '@/common/hasGetIndex'
+import type { ObjArrStr } from '@/type.d'
 
 /**
  * 检查是否存在值

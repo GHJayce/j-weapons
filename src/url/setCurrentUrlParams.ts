@@ -1,4 +1,4 @@
-import { setUrlParams } from '@/url/setUrlParams.ts'
+import { setUrlParams } from '@/url/setUrlParams'
 
 /**
  * 设置当前URL参数

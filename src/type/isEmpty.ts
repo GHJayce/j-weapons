@@ -1,6 +1,6 @@
-import { getType } from '@/type/getType.ts'
-import { getLength } from '@/common/getLength.ts'
-import { has } from '@/common/has.ts'
+import { getType } from '@/type/getType'
+import { getLength } from '@/common/getLength'
+import { has } from '@/common/has'
 
 /**
  * 判断是否为空

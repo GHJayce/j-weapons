@@ -1,7 +1,7 @@
-import { isSet } from '@/type/isSet.ts'
-import { getUrlParams } from '@/url/getUrlParams.ts'
-import { getType } from '@/type/getType.ts'
-import type { ObjectStrStr } from '@/type.d.ts'
+import { isSet } from '@/type/isSet'
+import { getUrlParams } from '@/url/getUrlParams'
+import { getType } from '@/type/getType'
+import type { ObjectStrStr } from '@/type.d'
 
 /**
  * 设置URL单个或多个参数

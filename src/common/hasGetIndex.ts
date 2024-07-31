@@ -1,6 +1,6 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { getType } from '@/type/getType.ts'
-import type { ObjArrStr } from '@/type.d.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { getType } from '@/type/getType'
+import type { ObjArrStr } from '@/type.d'
 
 /**
  * 检查是否存在值，存在返回索引/key，不存在返回-1

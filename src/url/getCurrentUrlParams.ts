@@ -1,5 +1,5 @@
-import { getUrlParams } from '@/url/getUrlParams.ts'
-import type { ObjectStrStr } from '@/type.d.ts'
+import { getUrlParams } from '@/url/getUrlParams'
+import type { ObjectStrStr } from '@/type.d'
 
 /**
  * 获取当前浏览器url参数

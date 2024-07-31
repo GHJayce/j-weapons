@@ -1,5 +1,5 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { has } from '@/common/has.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { has } from '@/common/has'
 
 /**
  * 检查对象是否存在某个key

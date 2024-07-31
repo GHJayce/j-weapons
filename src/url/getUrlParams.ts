@@ -1,5 +1,5 @@
-import { decodeUrl } from '@/url/decodeUrl.ts'
-import type { ObjectStrStr, ObjectAny } from '@/type.d.ts'
+import { decodeUrl } from '@/url/decodeUrl'
+import type { ObjectStrStr, ObjectAny } from '@/type.d'
 
 /**
  * 获取指定url的所有参数

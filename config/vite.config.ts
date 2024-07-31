@@ -14,7 +14,7 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'JW',
-      formats: ['umd', 'es'],
+      formats: ['umd'],
       fileName: 'index'
     },
     target: 'modules',

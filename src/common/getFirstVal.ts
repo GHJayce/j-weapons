@@ -1,6 +1,6 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { getType } from '@/type/getType.ts'
-import type { ObjArrStr, ObjectStrAny } from '@/type.d.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { getType } from '@/type/getType'
+import type { ObjArrStr, ObjectStrAny } from '@/type.d'
 
 /**
  * 获取第一个元素值

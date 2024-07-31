@@ -22,8 +22,7 @@
   "homepage": "https://github.com/GHJayce/j-weapons#readme",
   "type": "module",
   "files": [
-    "dist/",
-    "src/"
+    "dist/"
   ],
   "main": "dist/index.js",
   "exports": {
@@ -32,12 +31,12 @@
       "default": "dist/index.js",
       "import": "dist/index.js"
     },
-    "./string": "src/common/string.ts"
+    "./string": "dist/common/string.js"
   },
   "scripts": {
     "test": "jest --config=config/jest.config.ts",
     "prepare": "npm run build",
-    "build": "vite build --config config/vite.config.ts && cp src/type.d.ts dist/index.d.ts",
+    "build": "config/build.sh",
     "docs:serve": "docsify serve docs"
   },
   "devDependencies": {
@@ -49,6 +48,7 @@
     "prettier": "^3.3.3",
     "ts-jest": "^29.2.3",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
     "typescript": "^5.5.3",
     "vite": "^5.3.3"
   }

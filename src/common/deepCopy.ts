@@ -1,6 +1,6 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { getType } from '@/type/getType.ts'
-import type { ObjectAny } from '@/type.d.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { getType } from '@/type/getType'
+import type { ObjectAny } from '@/type.d'
 
 /**
  * 对象/数组深拷贝

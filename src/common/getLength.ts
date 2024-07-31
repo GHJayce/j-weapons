@@ -1,5 +1,5 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { getType } from '@/type/getType.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { getType } from '@/type/getType'
 
 /**
  * 获取数据长度

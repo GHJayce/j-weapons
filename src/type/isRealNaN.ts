@@ -1,4 +1,4 @@
-import { getType } from '@/type/getType.ts'
+import { getType } from '@/type/getType'
 
 /**
  * 检查NaN

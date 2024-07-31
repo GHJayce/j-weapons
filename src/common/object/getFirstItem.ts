@@ -1,6 +1,6 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { isEmpty } from '@/type/isEmpty.ts'
-import type { ObjectAny } from '@/type.d.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { isEmpty } from '@/type/isEmpty'
+import type { ObjectAny } from '@/type.d'
 
 /**
  * 获取第一个属性，没有则返回undefined。

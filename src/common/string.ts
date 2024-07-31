@@ -1,6 +1,4 @@
-import { isSet } from '@/type/isSet.ts'
-import { isEmpty } from '@/type/isEmpty.ts'
-import type { ObjectAny } from '@/type.d.ts'
+import type { ObjectAny } from '@/type.d'
 
 const trimCommon = (needle?: string): string => {
   needle = needle || '\\s'
@@ -112,7 +110,7 @@ if (!String.prototype.hasOwnProperty('rangeIndexReplace')) {
       return this.toString()
     }
     endIndex = endIndex || length
-    if (!isSet(startIndex) || endIndex < startIndex) {
+    if (endIndex < startIndex) {
       return this.toString()
     }
 
@@ -144,7 +142,7 @@ if (!String.prototype.hasOwnProperty('getShowCount')) {
 if (!String.prototype.hasOwnProperty('getShowCounts')) {
   String.prototype.getShowCounts = function (): object {
     let result: object = {}
-    if (this && !isEmpty(this)) {
+    if (this && this !== '' && this.trim() !== '') {
       let matchRes: RegExpMatchArray | null = this.split('')
         .sort()
         .join('')

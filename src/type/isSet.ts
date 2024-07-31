@@ -1,4 +1,4 @@
-import { isRealNaN } from '@/type/isRealNaN.ts'
+import { isRealNaN } from '@/type/isRealNaN'
 
 /**
  * 检查是否设置变量

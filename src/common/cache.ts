@@ -1,5 +1,5 @@
-import { isEmpty } from '@/type/isEmpty.ts'
-import type { ObjectAny } from '@/type.d.ts'
+import { isEmpty } from '@/type/isEmpty'
+import type { ObjectAny } from '@/type.d'
 
 const main = (drive: ObjectAny): object => {
   const get = (key: string): string | null => {

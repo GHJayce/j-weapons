@@ -1,7 +1,7 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { getType } from '@/type/getType.ts'
-import { getLength } from '@/common/getLength.ts'
-import type { ObjArrStr, ObjectStrAny } from '@/type.d.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { getType } from '@/type/getType'
+import { getLength } from '@/common/getLength'
+import type { ObjArrStr, ObjectStrAny } from '@/type.d'
 
 /**
  * 获取最后一个元素值

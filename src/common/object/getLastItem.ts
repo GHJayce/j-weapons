@@ -1,7 +1,7 @@
-import { reportExceptType } from '@/type/reportExceptType.ts'
-import { isEmpty } from '@/type/isEmpty.ts'
-import { getLength } from '@/common/getLength.ts'
-import type { ObjectAny } from '@/type.d.ts'
+import { reportExceptType } from '@/type/reportExceptType'
+import { isEmpty } from '@/type/isEmpty'
+import { getLength } from '@/common/getLength'
+import type { ObjectAny } from '@/type.d'
 
 /**
  * 获取最后一个属性，没有则返回undefined。

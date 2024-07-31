@@ -1,4 +1,4 @@
-import { getUrlParam } from '@/url/getUrlParam.ts'
+import { getUrlParam } from '@/url/getUrlParam'
 
 /**
  * 获取当前浏览器url的指定参数
