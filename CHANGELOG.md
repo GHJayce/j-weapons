@@ -7,7 +7,7 @@
    1. `trim()`更名为`clueTrim()`
    2. `trimLeft()`更名为`clueTrimLeft()`
    3. `trimRight()`更名为`clueTrimRight()`
-3. 改用TypeScript，输出文件为ES、UMD。
+3. 支持TypeScript，输出文件为ES、UMD。
 
 ## v1.5.0
 2022-03-31

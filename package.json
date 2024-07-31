@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/GHJayce/j-weapons#readme",
   "type": "module",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/"
   ],

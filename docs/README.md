@@ -40,12 +40,12 @@ isEmpty('')
 使用CDN
 
 - 引入指定版本：
-    - unpkg：https://unpkg.com/j-weapons@x.x.x/dist/j-weapons.umd.cjs
-    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons@x.x.x/dist/j-weapons.umd.cjs
+    - unpkg：https://unpkg.com/j-weapons@x.x.x/dist/index.umd.cjs
+    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons@x.x.x/dist/index.umd.cjs
 
 - 引入最新版：
-    - unpkg：https://unpkg.com/j-weapons/dist/j-weapons.umd.cjs
-    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.umd.cjs
+    - unpkg：https://unpkg.com/j-weapons/dist/index.umd.cjs
+    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/index.umd.cjs
 
 > 强烈建议生产环境使用带版本号的CDN
 
