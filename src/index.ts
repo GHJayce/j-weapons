@@ -35,4 +35,4 @@ export { getUrlParam } from '@/url/getUrlParam'
 export { getUrlParams } from '@/url/getUrlParams'
 export { setUrlParams } from '@/url/setUrlParams'
 
-export const version: string = '1.6.0'
+export const version: string = '1.6.1'

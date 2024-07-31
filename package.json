@@ -1,5 +1,6 @@
 {
   "name": "j-weapons",
+  "version": "1.6.1",
   "author": "GHJayce",
   "description": "J武器。一个开箱即用的函数库。提供了日常开发时所需的一些常用函数方法。",
   "keywords": [
@@ -14,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GHJayce/j-weapons.git"
+    "url": "git+https://github.com/GHJayce/j-weapons.git"
   },
   "bugs": {
     "url": "https://github.com/GHJayce/j-weapons/issues"

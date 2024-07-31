@@ -1,5 +1,8 @@
 
 # CHANGELOG
+## v1.6.1
+1. 修复发包遇到的问题
+
 ## v1.6.0
 2024-07-21
 1. 删除exposesToGlobal方法，不再暴露到window全局。
