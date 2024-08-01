@@ -41,9 +41,9 @@
     "prepare": "npm run build",
     "build": "vite build --config config/vite.config.ts && tsc --project config/tsconfig.es.build.json && tsc-alias --project config/tsconfig.es.build.json",
     "docs:o:serve": "docsify serve docs/o",
-    "docs:n:dev": "vitepress dev docs/n",
-    "docs:n:build": "vitepress build docs/n",
-    "docs:n:preview": "vitepress preview docs/n"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
@@ -57,6 +57,7 @@
     "tsc-alias": "^1.8.10",
     "typescript": "^5.5.3",
     "vite": "^5.3.3",
-    "vitepress": "^1.3.1"
+    "vitepress": "^1.3.1",
+    "vue": "^3.4.35"
   }
 }
