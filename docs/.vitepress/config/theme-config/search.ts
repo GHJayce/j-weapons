@@ -3,17 +3,12 @@ import type { DefaultTheme } from 'vitepress/types/default-theme'
 const config: DefaultTheme.Config['search'] = {
   provider: 'local',
   options: {
-    // /**
-    //  * @param {string} src
-    //  * @param {import('vitepress').MarkdownEnv} env
-    //  * @param {import('markdown-it')} md
-    //  */
-    // _render(src, env, md) {
-    //   const html = md.render(src, env)
-    //   if (env.frontmatter?.search === false) return ''
-    //   // if (env.relativePath.startsWith('some/path')) return ''
-    //   return html
-    // },
+    _render(src: any, env: any, md: any) {
+      const html = md.render(src, env)
+      if (env.frontmatter?.search === false) return ''
+      if (env.relativePath.startsWith('o/')) return ''
+      return html
+    },
     miniSearch: {
       /**
        * @type {Pick<import('minisearch').Options, 'extractField' | 'tokenize' | 'processTerm'>}
@@ -31,11 +26,15 @@ const config: DefaultTheme.Config['search'] = {
           term: string,
           storedFields?: Record<any, unknown>
         ): number => {
-          const path = window.location.pathname.substring(1)
-          if (path.indexOf('v') === 0) {
+          const prefix = 'j-weapons'
+          // @ts-ignore
+          const path = window.location.pathname.substring(1).slice(prefix.length).slice('/'.length)
+          const id = documentId.slice('/'.length).slice(prefix.length).slice('/'.length)
+          const prefixVersion = path.indexOf('v')
+          if (prefixVersion === 0) {
             const firstPathIndex = path.indexOf('/')
             const version = path.substring(0, firstPathIndex)
-            if (!documentId.substring(1).startsWith(version)) {
+            if (!id.startsWith(version)) {
               return 0
             }
           }
