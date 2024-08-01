@@ -1,6 +1,8 @@
 
 # 快速开始
 
+**!!!旧版本文档不再维护，请[前往新版本文档](https://ghjayce.github.io/j-weapons/n/)!!!**
+
 当前版本为：v1.5.0
 
 ## 介绍
@@ -33,16 +35,12 @@ npm install j-weapons
     - unpkg：https://unpkg.com/j-weapons@1.5.0/dist/j-weapons.min.js
     - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons@1.5.0/dist/j-weapons.min.js
 
-- 引入最新版：
-    - unpkg：https://unpkg.com/j-weapons/dist/j-weapons.min.js
-    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.min.js
-
 > 强烈建议生产环境使用带版本号的CDN
 
 
 
 ## 使用
-[看看JW都有些啥](https://runkit.com/ghjayce/60e96ac053846c001a0f0082)
+[看看JW都有些啥](https://npm.runkit.com/j-weapons)
 ```js
 import JW from 'j-weapons';
 // or 按需引入

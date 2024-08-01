@@ -1,0 +1,7 @@
+
+* Translations
+  * [中文](/)
+* Version
+  * [v1.6.x](https://ghjayce.github.io/j-weapons/o/)
+  * [v1.5.0](/)
+* [前往新版文档](https://ghjayce.github.io/j-weapons/n/)

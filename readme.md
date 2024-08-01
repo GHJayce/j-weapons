@@ -10,11 +10,7 @@ j-weapons，J武器。一个开箱即用的函数库。提供了日常开发时�
 [![Known Vulnerabilities](https://snyk.io/test/github/GHJayce/j-weapons/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GHJayce/j-weapons?targetFile=package.json)
 
 ## Links
-- [Documentation](https://ghjayce.github.io/j-weapons)
-
-## Browser Support
-
-Modern browsers and Internet Explorer 9+.
+- [Documentation](https://ghjayce.github.io/j-weapons/n/)
 
 ## Changelog
 

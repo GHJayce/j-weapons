@@ -3,6 +3,8 @@
 
 ## 介绍
 
+**!!!旧版本文档不再维护，请[前往新版本文档](https://ghjayce.github.io/j-weapons/n/)!!!**
+
 j-weapons，J武器。一个开箱即用的函数库。提供了日常开发时所需的一些常用函数方法。
 
 ![npm](https://img.shields.io/npm/dm/j-weapons)
@@ -11,11 +13,6 @@ j-weapons，J武器。一个开箱即用的函数库。提供了日常开发时�
 ![NPM](https://img.shields.io/npm/l/j-weapons?color=%2346c018)
 [![Known Vulnerabilities](https://snyk.io/test/github/GHJayce/j-weapons/badge.svg?targetFile=package.json)](https://snyk.io/test/github/GHJayce/j-weapons?targetFile=package.json)
 
-
-
-## 兼容性
-
-现代浏览器和Internet Explorer 9+。
 
 
 
@@ -40,12 +37,12 @@ isEmpty('')
 使用CDN
 
 - 引入指定版本：
-    - unpkg：https://unpkg.com/j-weapons@x.x.x/dist/index.umd.cjs
-    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons@x.x.x/dist/index.umd.cjs
+    - unpkg：https://unpkg.com/j-weapons@x.x.x/dist/j-weapons.umd.min.js
+    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons@x.x.x/dist/j-weapons.umd.min.js
 
 - 引入最新版：
-    - unpkg：https://unpkg.com/j-weapons/dist/index.umd.cjs
-    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/index.umd.cjs
+    - unpkg：https://unpkg.com/j-weapons/dist/j-weapons.umd.min.js
+    - jsdelivr：https://cdn.jsdelivr.net/npm/j-weapons/dist/j-weapons.umd.min.js
 
 > 强烈建议生产环境使用带版本号的CDN
 
