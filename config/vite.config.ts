@@ -11,11 +11,19 @@ export default defineConfig({
     }
   },
   build: {
+    modulePreload: {
+      polyfill: false
+    },
     lib: {
-      entry: 'src/index.ts',
+      entry: 'src/j-weapons.ts',
       name: 'JW',
       formats: ['umd'],
-      fileName: 'index'
+      fileName: (format, entryName: string): string => {
+        if (format === 'umd') {
+          return 'j-weapons.umd.min.js'
+        }
+        return 'j-weapons.js'
+      }
     },
     target: 'modules',
     outDir: 'dist/'

@@ -22,18 +22,19 @@
   },
   "homepage": "https://github.com/GHJayce/j-weapons#readme",
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "dist/j-weapons.d.ts",
   "files": [
-    "dist/"
+    "dist"
   ],
-  "main": "dist/index.js",
+  "main": "dist/j-weapons.umd.min.js",
   "exports": {
     ".": {
-      "require": "dist/index.umd.cjs",
-      "default": "dist/index.js",
-      "import": "dist/index.js"
+      "require": "./dist/j-weapons.umd.min.js",
+      "import": "./dist/j-weapons.js",
+      "default": "./dist/j-weapons.js",
+      "types": "./dist/j-weapons.d.ts"
     },
-    "./string": "dist/common/string.js"
+    "./string": "./dist/common/string.js"
   },
   "scripts": {
     "test": "jest --config=config/jest.config.ts",
