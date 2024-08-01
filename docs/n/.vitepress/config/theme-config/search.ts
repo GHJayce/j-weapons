@@ -26,7 +26,7 @@ const config: DefaultTheme.Config['search'] = {
           term: string,
           storedFields?: Record<any, unknown>
         ): number => {
-          const prefix = 'j-weapons'
+          const prefix = 'j-weapons/n'
           // @ts-ignore
           const path = window.location.pathname.substring(1).slice(prefix.length).slice('/'.length)
           const id = documentId.slice('/'.length).slice(prefix.length).slice('/'.length)

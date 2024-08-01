@@ -5,17 +5,17 @@ import searchConfig from './config/theme-config/search'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/j-weapons/',
+  base: '/j-weapons/n/',
   lang: 'zh',
   title: 'j-weapons',
   description: 'J武器。一个开箱即用的函数库。平时自己在做开发时所用到的一些常用函数方法。',
   lastUpdated: true,
   cleanUrls: true,
-  srcExclude: ['o/*'],
+  srcDir: 'src',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
-      pattern: 'https://github.com/GHJayce/j-weapons/edit/master/docs/:path'
+      pattern: 'https://github.com/GHJayce/j-weapons/edit/master/docs/n/src/:path'
     },
     search: searchConfig,
     nav: navConfig,

@@ -5,5 +5,5 @@ node_modules
 test
 package-lock.json
 dist
-docs/.vitepress/dist
-docs/.vitepress/cache
+docs/n/.vitepress/dist
+docs/n/.vitepress/cache
