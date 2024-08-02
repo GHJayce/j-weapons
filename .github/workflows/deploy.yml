@@ -48,7 +48,7 @@ jobs:
       - name: Build with VitePress
         run: pnpm run docs:build # npm run docs:build 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Handle directory path and file
-        run: "echo 'Current directory is: $GITHUB_WORKSPACE' && ls -la $GITHUB_WORKSPACE"
+        run: "echo $GITHUB_WORKSPACE && echo $PWD && ls -la $GITHUB_WORKSPACE && mv $GITHUB_WORKSPACE/docs/n/.vitepress/dist $GITHUB_WORKSPACE/docs/n/.vitepress/n && mkdir -p $GITHUB_WORKSPACE/docs/n/.vitepress/dist && mv $GITHUB_WORKSPACE/docs/n/.vitepress/n $GITHUB_WORKSPACE/docs/n/.vitepress/dist/ && cp -r $GITHUB_WORKSPACE/docs/o $GITHUB_WORKSPACE/docs/n/.vitepress/dist/ && cp $GITHUB_WORKSPACE/docs/index.html $GITHUB_WORKSPACE/docs/n/.vitepress/dist/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
