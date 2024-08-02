@@ -47,8 +47,11 @@ jobs:
         run: pnpm install # npm ci 或 pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: pnpm run docs:build # npm run docs:build 或 pnpm docs:build / yarn docs:build / bun run docs:build
-      - name: Handle directory path and file
-        run: "echo $GITHUB_WORKSPACE && echo $PWD && ls -la $GITHUB_WORKSPACE && mv $GITHUB_WORKSPACE/docs/n/.vitepress/dist $GITHUB_WORKSPACE/docs/n/.vitepress/n && mkdir -p $GITHUB_WORKSPACE/docs/n/.vitepress/dist && mv $GITHUB_WORKSPACE/docs/n/.vitepress/n $GITHUB_WORKSPACE/docs/n/.vitepress/dist/ && cp -r $GITHUB_WORKSPACE/docs/o $GITHUB_WORKSPACE/docs/n/.vitepress/dist/ && cp $GITHUB_WORKSPACE/docs/index.html $GITHUB_WORKSPACE/docs/n/.vitepress/dist/"
+      # $GITHUB_WORKSPACE: /home/runner/work/j-weapons/j-weapons
+      # $PWD: /home/runner/work/j-weapons/j-weapons
+      # 即当前路径是项目的根目录
+      - name: Handle vitepress dist file
+        run: "mv ./docs/n/.vitepress/dist ./docs/n/.vitepress/n && mkdir -p ./docs/n/.vitepress/dist && mv ./docs/n/.vitepress/n ./docs/n/.vitepress/dist/ && cp -r ./docs/o ./docs/n/.vitepress/dist/ && cp ./docs/index.html ./docs/n/.vitepress/dist/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
